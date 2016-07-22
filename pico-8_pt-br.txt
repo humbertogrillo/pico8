@@ -262,7 +262,6 @@ Bem vindo(a) ao PICO-8!
 :: Peculiaridades do PICO-8
 
 	Peculiaridades comuns a serem observadas:
-	
 	- A metade inferior do spritesheet e a metade inferior do mapa ocupam o mesmo espaço em memória;
 		// Melhor usar um ou outro se não souber como isto funciona.
 	- Números em PICO-8 têm o limite de 32767,99;
@@ -395,7 +394,6 @@ Bem vindo(a) ao PICO-8!
 	- Q, W para alternar entre o sprite anterior e o seguinte.
 
 
-
 :: Editor de SFX (SFX)
 
 	Existem 64 SFX ("efeitos sonoros") em um cartucho, usados tanto para sons quanto para música.
@@ -404,7 +402,7 @@ Bem vindo(a) ao PICO-8!
 		Uma frequência	(C0..C5) Onde C=Dó, D=Ré, etc.;
 		Um instrumento	(0..7);
 		Um volume	(0..7);
-		Um efeito	(0..7);
+		Um efeito	(0..7).
 	
 	Cada SFX também possui as seguintes propriedades:
 	
@@ -419,117 +417,117 @@ Bem vindo(a) ao PICO-8!
 	esquerdo ou usando TAB.
 	
 	
-	1. Modo Pitch
+	1. Modo pitch
 	
-		Clique e arraste na área para definir a frequência da nota usando o instrumento
-		atual (indicado pela cor).
+		Clique e arraste na área para definir a frequência de cada nota,
+		usando o instrumento atual (indicado pela cor).
 		
-		Segure SHIFT para aplicar apenas o instrumento selecionado
-		Segure CTRL para deslocar as notas na escala de C menor	
+		Segure SHIFT para aplicar apenas o instrumento selecionado;
+		Segure CTRL para deslocar as notas na escala de C menor.	
 	
 	2. Modo de trilha
 	
-		Cada nota apresenta: Frequencia, oitava, instrumento, volume, efeito
-		para adicionar uma nota, use q2w3er5t6y7ui zsxdcvgbhnjm (semelhante a um piano)
-		Novas notas seguirão o instrumento e efeito selecionados
-		Para apagar uma nota use BACKSPACE ou marque o volume como 0
+		Cada nota apresenta: frequência, oitava, instrumento, volume e efeito;
+		Para adicionar uma nota, use q2w3er5t6y7ui zsxdcvgbhnjm (semelhante a um piano);
+		Novas notas seguirão o instrumento e efeito selecionados;
+		Para apagar uma nota use BACKSPACE ou marque o volume como 0.
 	
 		Clique e depois SHIFT+Clique para definir uma área a ser copiada
-		(CTRL+C) e colada (CTRL+V)
+		(CTRL+C) e colada (CTRL+V).
 		
 		
 	3. Controles para ambos os modos
 	
-		- + para navegar no SFX atual
-	    	< > para alterar velocidade
-		ESPAÇO para reproduzir ou parar
-		A Para liberar uma repetição
-		Clique com o botão direito ou equerdo para reduzir ou aumentar a velocidade ou indice da repetição
+		- + para navegar no SFX atual;
+	    	< > para alterar velocidade;
+		ESPAÇO para reproduzir ou parar;
+		A para criar uma repetição de exemplo;
+		Clique com o botão direito ou esquerdo para reduzir ou aumentar a velocidade ou índice da repetição;
 		 // Segure SHIFT para aumentar ou reduzir de 4 em 4
-		 // Alternativamente, clique e arraste para direita e esquerda ou para cima e para baixo
+		 // É possível também clicar e arrastar para direita e esquerda, ou para cima e para baixo
 		SHIFT+Clique em um instrumento, efeito ou volume para definí-lo para todas as notas.
 	
 	
 	:: Efeitos
 	
 		0 nenhum
-		1 slide          //  Distorce a nota até atingir a frequencia da seguinte
-		2 vibrato        //  Rapidamente alterna a frequencia da nota em um quarto de tom
-		3 drop           //  Rapidamente reduz a frequencia para um valor baixo
-		4 fade in        //  Aumenta o volume a partir de 0
+		1 slide          //  Distorce a nota até atingir a frequência da seguinte
+		2 vibrato        //  Rapidamente alterna a frequência da nota em um quarto de tom
+		3 drop           //  Rapidamente reduz a frequência para um valor muito mais baixo
+		4 fade in        //  Aumenta o volume, começando em 0
 		5 fade out       //  Reduz o volume até 0
-		6 arpeggio fast  //  Itera sobre um grupo de 4 notas em velocidade 4
-		7 arpeggio slow  //  Itera sobre um grupo de 4 notas em velocidade 8
+		6 arpeggio fast  //  Repete grupos de 4 notas em velocidade 4
+		7 arpeggio slow  //  Repete grupos de 4 notas em velocidade 8
 		
-		Se a velogidade do SFX for menor ou igual a 8, a velocidade do arpeggio altera para 2, 4
+		Se a velocidade do SFX for menor ou igual a 8, a velocidade do arpeggio altera para 2, 4.
 
 
-:: Editor de Música
+:: Editor de música
 
-	Música em PICO-8 é controlada por uma sequência de 'modelos'. Cada modelo é uma lista de
+	Música em PICO-8 é controlada por uma sequência de "modelos". Cada modelo é uma lista de
 	4 números indicando qual SFX será tocado em qual canal.
 	
 	
 	:: Controle de fluxo
 	
-		O fluxo pode ser controlado pelos 3 botões no canto superior direito.
+		O fluxo pode ser controlado pelos três botões no canto superior direito.
 	
 		Quando um modelo termina de ser reproduzido, o próximo modelo é executado, a não ser que:
-	
-		- Não existe mais o que ser reproduzido (música para)
-		- um comando de PARADA (STOP) é definido no modelo (primeiro botão)
-		- um comando de REPETIR (LOOP BACK) é definido (terceiro botão), assim o reprodutor de música
-			busca por um modelo com o comando INÍCIA REPETIÇÃO (LOOP START) (segundo botão)
-			ou retorna para o modelo 0 se não encontrar.
+		- Não exista mais nada para ser reproduzido (música para);
+		- Um comando de PARADA (STOP) estiver presente no modelo (primeiro botão);
+		- Um comando de REPETIR (LOOP BACK) estiver presente (terceiro botão), assim o reprodutor
+		   busca por um modelo com o comando INICIAR REPETIÇÃO (LOOP START) (segundo botão)
+		   ou retorna para o modelo 0 se não encontrá-lo.
 	
 		Quando um modelo possuir SFXs com velocidades diferentes, o modelo para de ser reproduzido
-		no momento que o canal mais a esquerda e sem repetição terminar de ser reproduzido.
-		Isto pode ser usado para definir tempos irregulares ou bateria com tempo dobrado, etc.
+		no momento que o canal mais à esquerda e sem repetição terminar de ser reproduzido.
+		Isto pode ser usado para definir tempos irregulares, baterias com tempo dobrado etc.
 	
 	
-	:: Copiando músicas entre cartuchos ou dendtro de um cartucho
+	:: Copiando músicas entre cartuchos ou dentro de um cartucho
 	
 		Para selecionar um grupo de modelos: clique uma vez no primeiro modelo no navegador,
-		então use SHIFT+clique no último modelo. Modelos selecionados podem ser copiados
+		então use SHIFT+Clique no último modelo. Modelos selecionados podem ser copiados
 		e colados com CTRL+C e CTRL+V. Quando colar em outro cartucho, o SFX de cada modelo
 		também será copiado (possívelmente com índice diferente) se este já não existir.
 
 	
 ============================================================================================
-	Cartilha de Sintaxe Lua
+	Cartilha de sintaxe Lua
 ============================================================================================
 
-Programas para o PICO-8 são escritos usando Lua, mas não usam a biblioteca padrão Lua.
-A seguir está um breve sumário da sintaxe exencial para Lua.
+Programas para o PICO-8 são escritos usando Lua, mas não usam a biblioteca padrão do Lua.
+A seguir está um breve sumário da sintaxe essencial para Lua.
 
-Para mais detalhes, ou para saber mais sobre o Lua oficial, veja www.lua.org.
+Para mais detalhes, ou para saber mais sobre o Lua oficial, visite www.lua.org.
 
 	NOTA DO TRADUTOR: PICO-8 não permite o uso de acentos. Alguns exemplos neste documento
-		apresentam acento para proporcionar clareza do leitor.
+		apresentam acento para proporcionar clareza ao leitor.
 
 :: Comentários
 
-	-- Use dois hífens (sinal de menos) para ignorar o trecho até o final da linha.
-	--[[ Comentários
-	com linhas múltiplas ]]
+	Use dois hífens ("--") para ignorar o trecho até o final da linha;
+	Use "--[[" e "]]" para comentários de múltiplas linhas. Ex.:
+		--[[ Comentários
+		de múltiplas linhas ]]
 	
 	
 :: Tipos e atribuições
 
-	Os tipos em Lua são Números, Cadeias (strings), Boleanos (VERDADEIRO e FALSO) e Tabelas;
+	Os tipos em Lua são números, cadeias (strings), boleanos (VERDADEIRO e FALSO) e tabelas:
 
 	NUM = 12/100
 	S = "Isto é uma cadeia de caracteres"
 	B = FALSE
 	T = {1,2,3}
 	
-	Números em PICO-8 podem estar entre -32768.0 e 32767.99
+	Números em PICO-8 podem estar entre -32768.0 e 32767.99.
 	
 	Números hexadecimais com opção para frações podem ser usados:
 		0x11        -- 17
 		0x11.4000   -- 17.25
 	
-	Dividir por zero resulta no maior número possível: 0x7fff.ffff
+	Dividir por zero resulta no maior número possível: 0x7fff.ffff.
 	
 
 :: Condicionais
@@ -562,7 +560,7 @@ Para mais detalhes, ou para saber mais sobre o Lua oficial, veja www.lua.org.
 	FOR X=1,5 DO
 		PRINT(X)
 	END
-	-- prints 1,2,3,4,5
+	-- exibe 1, 2, 3, 4, 5
 
 	X = 1
 	WHILE(X <= 5) DO
@@ -570,9 +568,9 @@ Para mais detalhes, ou para saber mais sobre o Lua oficial, veja www.lua.org.
 		X = X + 1
 	END
 	
-	FOR X=1,10,3 DO PRINT(X) END   -- 1,4,7,10
+	FOR X=1,10,3 DO PRINT(X) END	-- 1, 4, 7, 10
 
-	FOR X=5,1,-2 DO PRINT(X) END  -- 5,3,1
+	FOR X=5,1,-2 DO PRINT(X) END	-- 5, 3, 1
 	
 
 :: Funções e variáveis locais
@@ -582,15 +580,14 @@ Para mais detalhes, ou para saber mais sobre o Lua oficial, veja www.lua.org.
 		LOCAL Y = X+1
 		RETURN Y
 	END
-	PRINT(MAISUM(2)) -- 3
-	PRINT(Y)          -- 0
+	PRINT(MAISUM(2))	-- 3
+	PRINT(Y)        	-- 0
 
 
 :: Tabelas
 	
-	Em Lua, tabelas são coleções de pares de informação chave/valor onde chaves e valores podem
-	ser de tipos misturados.
-	Elas podem ser usadas como arrays usando como índices numéros inteiros (1,2,3,...).
+	Em Lua, tabelas são coleções de pares de informação chave-valor, onde chaves e valores podem
+	ser de tipos misturados. Elas podem ser usadas como arrays se indexá-las com numéros inteiros (1,2,3,...).
 
 	A={} -- cria uma tabela vazia
 	A[1] = "BLAH"
@@ -602,43 +599,43 @@ Para mais detalhes, ou para saber mais sobre o Lua oficial, veja www.lua.org.
 	A = {11,12,13,14}
 	PRINT(A[2]) -- 12
 	
-	-- O tamanho da tabela pode ser acessado usando # antes da tabela:
+	-- O tamanho da tabela pode ser acessado usando # antes da tabela
 	
 	PRINT(#A)   -- 4
 	
-	-- indices que são palavras podem ser escritas com a notação de ponto
+	-- Índices que são palavras podem ser escritas com a notação de ponto
 	
 	PLAYER = {}
 	PLAYER.X = 2 -- equivale a PLAYER["X"]
 	PLAYER.Y = 3
 
-	-- veja também tabelas nas referencias de API abaixo.
+	-- veja também tabelas nas referências de API abaixo.
 
 	
-:: PICO-8 Abreviações
+:: Abreviações no PICO-8
 
-	PICO-8 permite abreviar modelos padrão de maneira não usual.
+	PICO-8 também permite utilizar abreviações fora do padrão.
 	
-	1. IF THEN END  em uma única linha:
+	1. Funções "IF THEN END" em uma única linha podem ser expressas sem "THEN" e "END":
 	
 	IF (NOT B) I=1 J=2
 	
 	-- É equivalente a: IF (NOT B) THEN I=1 J=2 END
-	-- Perceba que o condicional DEVE estar entre parenteses.
+	-- Note que o condicional DEVE estar entre parênteses.
 	
 	
 	2. Operadores matemáticos unários
 	
-	a += 2  -- equivalente a: a = a + 2
-	a -= 2  -- equivalente a: a = a - 2
-	a *= 2  -- equivalente a: a = a * 2
-	a /= 2  -- equivalente a: a = a / 2
-	a %= 2  -- equivalente a: a = a % 2
+	x += 2  -- equivalente a: x = x + 2
+	x -= 2  -- equivalente a: x = x - 2
+	x *= 2  -- equivalente a: x = x * 2
+	x /= 2  -- equivalente a: x = x / 2
+	x %= 2  -- equivalente a: x = x % 2
 	
 	
-	3. != operador
+	3. Operador "!="
 	
-	Não é uma abreviação, mas pico-8 aceita também != no lugar de ~= para "não igual a"
+	Não é uma abreviação, mas PICO-8 aceita também "!=" no lugar de "~=" para "não igual a".
 
 
 ============================================================================================
