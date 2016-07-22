@@ -34,8 +34,8 @@ Bem vindo(a) ao PICO-8!
 	Executar, reiniciar e recarregar cartucho: Ctrl + R
 	Salvar: Ctrl + S
 	Pausar (enquanto executando): P
-	Jogador 1 (padrão): Setas + Z,X / N,M / C,V
-	Jogador 2 (padrão): S,D,F,E + Tab,Q / Shift,A
+	Jogador 1 (padrão): Setas + Z, X / N, M / C, V
+	Jogador 2 (padrão): S, D, F, E + Tab, Q / Shift, A
 	// Altere o padrão usando KEYCONFIG
 	
 	
@@ -300,99 +300,99 @@ Bem vindo(a) ao PICO-8!
 	Modos do editor
 ============================================================================================
 	
-	Pressione ESC para alternar entre Terminal e o Editor
+	Pressione ESC para alternar entre o terminal e o editor.
 	Clique nas abas no topo do editor para alternar entre os modos. Também é possível 
-	usar ALT+ESQUERDA/DIREITA
+	usar ALT+ESQUERDA/DIREITA.
 
 
 	** ALERTA: A segunda metade do spritesheet (bancos 2 e 3) e a metade de baixo do mapa
-	compartilham o mesmo espaço no cartucho. Você deve decidir como usar esta parte,
-	mas esteja atento para o fato de que desenhar sprites neste espaço pode estragar
-	um mapa na mesma área e vice-versa
+	compartilham o mesmo espaço no cartucho. Você deve decidir como usar essa parte,
+	mas esteja atento para o fato de que desenhar sprites nesse espaço pode estragar
+	um mapa na mesma área e vice-versa.
 	
 
-:: Editor de Código
+:: Editor de código
 	
-	Segure SHIFT para selecionar (ou clique e arraste com o mouse)
-	CTRL-X, C, V para cortar, copiar e colar o trecho selecionado
-	CTRL-Z, Y para desfazer ou refazer uma ação
-	CTRL-F para buscar um texto
-	CTRL-G para refazer a última busca
-	ALT-UP, DOWN para navegar entre as funções
+	Segure SHIFT para selecionar (ou clique e arraste com o mouse);
+	CTRL-X, C, V para cortar, copiar e colar o trecho selecionado;
+	CTRL-Z, Y para desfazer ou refazer uma ação;
+	CTRL-F para buscar um texto;
+	CTRL-G para refazer a última busca;
+	ALT-CIMA, BAIXO para navegar entre as funções.
 	
 	No canto inferior direito do editor você pode ver quantos tokens foram usados. Um programa
 	pode ter um máximo de 8192 tokens. Cada token representa uma palavra (ex.: nome de variáveis)
-	ou operador. Pares de Parênteses e palavras (strings) contam como um token. Vírgulas, pontos,
+	ou operador. Pares de parênteses e palavras (strings) contam como um token. Vírgulas, pontos,
 	LOCAL, ponto-e-vírgula, END e comentários não são contados.
 	
-	Para usar caracteres especiais, use SHIFT+L/R/U/D/O/X
+	Para usar caracteres especiais, use SHIFT+L/R/U/D/O/X.
 	
 
-:: Editor de Sprite
+:: Editor de sprites
 
-	O editor de sprite foi desenvolvido para desenhos detalhados quando para forma livre.
-	O navegador de sprites na parte inferior prmite visualização de sprites de 8x8 pixels,
+	O editor de sprites foi desenvolvido tanto para desenhos detalhados quanto para forma livre.
+	O navegador de sprites na parte inferior permite visualização de sprites de 8x8 pixels,
 	mas é possível usar ferramentas de forma livre (pan, seleção) quando lidando com formas
 	maiores ou de formatos diversos.
 
-	Ferramenta de Desenho
-		clique e arraste para desenhar um sprite
-		Aplicável na área visível
-		Segure CTRL para buscar e trocar uma cor
-		Use o botão esquerdo para selecionar uma cor
+	Ferramenta de desenho
+		Clique e arraste para desenhar um sprite;
+		Aplicável na área visível;
+		Segure CTRL para buscar e trocar uma cor;
+		Use o botão esquerdo do mouse para selecionar uma cor.
 
-	Ferramenta de Carimbo
-		Clique para carimbar uma forma salva 
-		Segure L-CTRL para carimbar com transparência
+	Ferramenta de carimbo
+		Clique para carimbar uma forma salva;
+		Segure L-CTRL para carimbar com transparência.
 
-	Ferramenta de Seleção // atalho: LSHIFT ou S
-		Cria uma seleção
-		Use ENTER ou clique para desselecionar.
+	Ferramenta de seleção 		// atalho: L-SHIFT ou S
+		Cria uma seleção;
+		Use ENTER ou botão esquerdo para desselecionar.
 	
-	Ferramenta de panorama // atalho: ESPAÇO
+	Ferramenta de panorama 		// atalho: ESPAÇO
 		Visualiza o spritesheet.
 	
-	Ferramenta de Preenchimento
-		Preenche uma área com a cor atual
-		Aplicável a uma seleção
-		Se não houver seleção, aplica na área visível
+	Ferramenta de preenchimento
+		Preenche uma área com a cor atual;
+		Aplicável a uma seleção;
+		Se nada estiver selecionado, aplica na área visível.
 
 	Outros comandos:
-		CTRL-Z para desfazer // um único passo versão 0.2.0
-		CTRL-C para copiar a área ou sprites selecionados
-		CTRL-V para colar no sprite atual
-		Q,W para alternar entre o próximo sprite e o anterior
-		1,2 para alternar entre a próxima cor e a anterior
-		Tab Para alternar entre modo tela cheia
-		Roda do Mouse para dar zoom (centralizado no modo tela cheia)
+		CTRL-Z para desfazer; 	// somente um passo na versão 0.2.0
+		CTRL-C para copiar a área ou sprites selecionados;
+		CTRL-V para colar no sprite atual;
+		Q, W para alternar entre o sprite seguinte e o anterior;
+		1, 2 para alternar entre a cor seguinte e a anterior;
+		TAB para alternar entre modo tela cheia e janela;
+		Roda do mouse para dar zoom (centralizado quando no modo tela cheia).
 	
 	
-	Operações na área ou sprite selecionados:
-		f para espelhar horizontalmente
-		v para espelhar verticalmente
-		r para rotacionar (deve ser uma área quadrada)
-		Setas do teclado para mover (realiza looping quando vendo sprite)
+	Operações na área ou sprite selecionado:
+		F para espelhar horizontalmente;
+		V para espelhar verticalmente;
+		R para rotacionar (deve ser uma área quadrada);
+		Setas do teclado para mover (realiza looping quando vendo sprite).
 		
-	Flags de Sprite
+	Flags de sprite
 		Os 8 círculos coloridos são flags para o sprite atual. Cada um pode
-		estar ligado (TRUE) ou desligado (FALSE), e são acessáveis pelas funções
-		FSET e FGET. Elas são indexadas a partir de 0 (0,1,2..7).
-		vEJA fset() para mais informações.
+		estar ligado (TRUE) ou desligado (FALSE), e são acessados pelas funções
+		FSET e FGET. Elas são indexadas a partir de 0 (0, 1, 2..7).
+		Veja fset() para mais informações.
 	
 
-:: Editor de Mapa
+:: Editor de mapa
 
 	O mapa no PICO-8 é um bloco de 128 por 32 (ou 128 por 64 se usar o espaço compartilhado)
-	de valores de 8 bits. Cada calor é exibido no editor como a referência de um sprite
-	(0 a 255), mas você pode usar estes dados para definir o que você quiser.
+	de valores de 8 bits. Cada valor é exibido no editor como a referência de um sprite
+	(0 a 255), mas você pode usar esses dados para definir o que você quiser.
 
-	As ferramentas são semelhantes ao editor de sprites. Selecione um Sprite e clique e arraste
+	As ferramentas são semelhantes ao editor de sprites. Selecione um sprite e clique e arraste
 	para pintar o mapa.
 
-	Para desenhar vários sprites, selecione-os com SHIFT+MOUSE
-	Para copiar um bloco, use a ferramenta de seleção e então o carimbo
-	Para passear pelo mapa, use a ferramenta de panorama ou segure ESPAÇO
-	Q,W para alternar entre o sprite anterior e o seguinte
+	- Para desenhar vários sprites, selecione-os com SHIFT+MOUSE;
+	- Para copiar um bloco, use a ferramenta de seleção e então o carimbo;
+	- Para passear pelo mapa, use a ferramenta de panorama ou segure ESPAÇO;
+	- Q, W para alternar entre o sprite anterior e o seguinte.
 
 
 
@@ -401,20 +401,20 @@ Bem vindo(a) ao PICO-8!
 	Existem 64 SFX ("efeitos sonoros") em um cartucho, usados tanto para sons quanto para música.
 	
 	Cada SFX contém 32 notas e cada uma possui:
-		Uma frequência	(C0..C5) Onde C=Dó, D=Ré, etc
-		Um instrumento	(0..7)
-		Um volume	(0..7)
-		Um efeito	(0..7)
+		Uma frequência	(C0..C5) Onde C=Dó, D=Ré, etc.;
+		Um instrumento	(0..7);
+		Um volume	(0..7);
+		Um efeito	(0..7);
 	
 	Cada SFX também possui as seguintes propriedades:
 	
-		Uma velocidade (SPD) : O número de ciclos pelo qual uma nota será tocada.
+		Uma velocidade (SPD) : O número de ciclos pelo qual uma nota será tocada;
 			// Isto significa que 1 é o mais rápido, 4 é duas vezes mais lento que 2, etc.
 		
-		Início e fim de repetição : define os índices para realizar uma repetição
+		Início e fim de repetição : define os índices para realizar uma repetição.
 			// Repetição é desativada quando o início é maior ou igual ao fim
 	
-	Existem duas formas de editar/visualizar um SFX: Modo Pitch (mais adequado para efeitos sonoros)
+	Existem duas formas de editar/visualizar um SFX: modo pitch (mais adequado para efeitos sonoros)
 	e faixa (melhor para música). O modo pode ser alternado usando os botões no canto supeiror
 	esquerdo ou usando TAB.
 	
