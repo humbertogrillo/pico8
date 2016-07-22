@@ -6,7 +6,7 @@
  http://www.pico-8.com
  (c) Copyright 2014-2016 Lexaloffle Games LLP
  Autor: Joseph White // hey@lexaloffle.com
- Tradutor pt-br: Humberto Celia-Silva // humberto.celiasilva@gmail.com
+ Tradutor pt-br: Humberto Celia-Silva // humberto.celiasilva@gmail.com // @betoraposa
  
  PICO-8 é construído com:
  	SDL2 http://www.libsdl.org
@@ -18,18 +18,18 @@
 Bem vindo(a) ao PICO-8!
 
 	PICO-8 é um console fantasia para fazer, distribuir e jogar pequenos jogos e programas
-	de computador. Quando ligado, a maquina te apresenta um shell (terminal ou console) pa-
-	ra digitar código em Lua diretamente e fornece ferramentas simples para criar sprites
-	(imagens), maps e audio.
+	de computador. Quando ligado, a maquina te apresenta um shell (terminal ou console)
+	para digitar código em Lua diretamente, e fornece ferramentas simples para criar sprites
+	(imagens), maps e áudio.
 	
 	As severas limitações do PICO-8 foram cuidadosamente escolhidas para serem divertidas,
 	encorajar designs pequenos porém expressivos e fornecer aos cartuchos do PICO-8 uma
-	aparência e perceptividade particular.
+	aparência e personalidade particular.
 	
 	
 :: Teclas
 
-	Alterna entre Tela cheia: Alt + Enter
+	Alterna entre Tela-cheia e janela: Alt + Enter
 	Sair: Alt + F4 ou command - Q
 	Executar, reiniciar e recarregar cartucho: Ctrl + R
 	Salvar: Ctrl + S
@@ -45,7 +45,7 @@ Bem vindo(a) ao PICO-8!
 	Entrada: 6 botões
 	Tamanho do Cartucho: 32k
 	Áudio: 4 canais, 64 ruídos definíveis
-	Código: Lua (Máximo 8192 Elementos)
+	Código: Lua (Máximo 8192 Elementos (tokens))
 	Sprites: Banco com 128 sprites de 8x8 (+ 128 compartilhados)
 	Mapa: 128x32 celulas de 8-bit (+ 128x32 compartilhados)
 	
@@ -89,7 +89,7 @@ Bem vindo(a) ao PICO-8!
 	INSTALL_DEMOS
 	CD DEMOS
 	
-	API			Demonstra a maioria das funcionaldades do PI
+	API		Demonstra a maioria das funcionaldades do PI
 	JELPI		Jogo demo de plataforma com suporte a dois jogadores
 	CAST		Demo de 2.5D
 	MANDEL		explorador de conjunto de Mandelbrot
@@ -97,7 +97,7 @@ Bem vindo(a) ao PICO-8!
 	BUTTERFLY	Coisa triangular sepertinante
 	DRIPPY		Desenha uma linha que escorre
 	STOMPY		Cartucho de música
-	WOO			Cartucho de música
+	WOO		Cartucho de música
 	
 	Para rodar um cartucho, abra o PICO-8 e digite
 	
@@ -111,8 +111,8 @@ Bem vindo(a) ao PICO-8!
 
 	Estes comandos podem ser usados para gerenciar os arquivos nos diretórios (pastas)
 	
-	DIR			lista o diretório atual
-	LS			mesmo que DIR
+	DIR		lista o diretório atual
+	LS		mesmo que DIR
 	CD BLA		vai para o diretório BLA
 	CD ..		volta para o diretório anterior
 	CD /		volta para o diretório inicial do PICO-8
@@ -221,7 +221,7 @@ Bem vindo(a) ao PICO-8!
 			ser compatível com o canvas no qual é exibido (580,540 por padrão).
 
 
-:: Screenshots, Vídeos and Etiquetas de Cartuchos
+:: Screenshots, Vídeos e Etiquetas de Cartuchos
 
 	Enquanto executar um cartucho, use:
 
@@ -234,7 +234,7 @@ Bem vindo(a) ao PICO-8!
 	
 	Etiqueta do Cartucho é salva como p8.png quando se usa o comando save().
 	
-	Você pode salvar um vídeo a qualquer momento (ele está sempre filmando) -- use F8 para reiniciar
+	Você pode salvar um vídeo a qualquer momento (PICO-8 está sempre gravando) -- use F8 para reiniciar
 	a gravação a partir de um ponto específico.
 
 	Para mudar a duração máxima do gif, altere gif_len no arquivo config.txt para definir o número de 
