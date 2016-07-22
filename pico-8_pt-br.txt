@@ -207,70 +207,70 @@ Bem vindo(a) ao PICO-8!
 		
 			EXPORT FOO.HTML
 			
-			Este comando gerará dois arquivos: foo.html e foo.js (você vai precisar de ambos!)
+			Este comando gerará dois arquivos: foo.html e foo.js (você precisará de ambos!).
 			
 			Você pode usar e distribuir cartuchos como quiser, contanto que você tenha permissão
 			do autor e contribuintes.
 			
-			O arquivo .html tem o propósito de ser um template ue pode ser alterado caso necessário.
+			O arquivo .html tem o propósito de ser um template que pode ser alterado caso necessário.
 			Ele inclui alguns botões para controlar as configurações e um link para uma página 
 			(PICO-8 BBS cartridges por padrão), junto com um javascript para bloquear o comportamento
-			padrão do teclado, para previnir rolar a página enquanto o cartucho é executado.
+			padrão do teclado, para prevenir rolar a página enquanto o cartucho é executado.
 			
-			Perceba que a altura e largura do aplicativo podem ser configuradas, mas deve 
-			ser compatível com o canvas no qual é exibido (580,540 por padrão).
+			Perceba que a altura e largura do aplicativo podem ser configuradas, mas devem 
+			ser compatíveis com o canvas no qual é exibido (580,540 por padrão).
 
 
-:: Screenshots, Vídeos e Etiquetas de Cartuchos
+:: Screenshots, vídeos e etiquetas de cartuchos
 
 	Enquanto executar um cartucho, use:
 
-		F6 para salvar um screenshot (captura de tela) para a Área de Trabalho
-		F7 para capturar uma imagem para ser usada como etiqueta do cartucho
-		F8 para começar a gravar um vídeo
-		F9 para parar de gravar o vídeo e salvá-lo na Área de Trabalho (max: 8 segundos do padrão)
+		F6 para salvar um screenshot (captura de tela) na área de trabalho;
+		F7 para capturar uma imagem para ser usada como etiqueta do cartucho;
+		F8 para começar a gravar um vídeo;
+		F9 para parar de gravar o vídeo e salvá-lo na área de trabalho (máx.: 8 segundos por padrão).
 		
 		// Se F6..F9 não estiverem disponíveis no seu sistema, use F1..F4
 	
-	Etiqueta do Cartucho é salva como p8.png quando se usa o comando save().
+	A etiqueta do cartucho é salva como p8.png quando se usa o comando save().
 	
 	Você pode salvar um vídeo a qualquer momento (PICO-8 está sempre gravando) -- use F8 para reiniciar
 	a gravação a partir de um ponto específico.
 
 	Para mudar a duração máxima do gif, altere gif_len no arquivo config.txt para definir o número de 
-	segundos a serem gravados. O formato gif pode não resultar em 30fps (imagens por segundo) então
-	PICO-8  usa uma aproximação: 33.3fps.
+	segundos a serem gravados. O formato gif pode não resultar em 30FPS (quadros por segundo) então
+	PICO-8 usa uma aproximação: 33,3FPS.
 	
 
-:: Exportadores e Importadores
+:: Exportadores e importadores
 
-	1. Para importar o exportar uma spritesheet (imagens de jogo) como .png:
+	1. Para importar ou exportar uma spritesheet (imagens de jogo) como .png:
 	
-		import("blah.png")    --  Espera um png de 128x128 com cores compatíveis com a palheta do PICO-8
-		export("blah.png")    --  Salva o arquivo blah.png. use folder() para localizar o arquivo exportado
+		import("blah.png")    --  Pede um png de 128x128 com cores compatíveis com a palheta do PICO-8;
+		export("blah.png")    --  Salva o arquivo blah.png. Use folder() para localizar o arquivo exportado.
 	
 	2. Para exportar efeitos sonoros e música:
 	
-		export("blah.wav")    --  exporta musica da trilha atual quando o editor estiver em modo MÚSICA
-		export("blah.wav")    --  exporta o efeito sonoro atual quando o editor estiver em modo SFX
-		export("blah%d.wav")  --  exporta todos os efeitos sonoros seguindo o padrão 
-					  blah0.wav, blah1.wav .. blah63.wav
+		export("blah.wav")    --  Exporta música da trilha atual quando o editor estiver em modo MÚSICA;
+		export("blah.wav")    --  Exporta o efeito sonoro atual quando o editor estiver em modo SFX;
+		export("blah%d.wav")  --  Exporta todos os efeitos sonoros seguindo o padrão: blah0.wav, 
+					  blah1.wav .. blah63.wav.
 
-		// Na linha de comando você pode ignorar os parênteses aspas, digitando: EXPORT BLAH.WAV 
+		// Na linha de comando você pode ignorar os parênteses e as aspas, digitando: EXPORT BLAH.WAV 
 
 
 :: Peculiaridades do PICO-8
 
 	Peculiaridades comuns a serem observadas:
 	
-	- A metade inferior do spritesheet e a metade inferior do mapa ocupam o mesmo espaço em memória.
+	- A metade inferior do spritesheet e a metade inferior do mapa ocupam o mesmo espaço em memória;
 		// Melhor usar um ou outro se não souber como isto funciona.
-	- Números em PICO-8 tem o limite de 32767,99.
+	- Números em PICO-8 têm o limite de 32767,99;
 		// Se você adicionar 1 a um contador a cada frame, ele vai estourar em 18 minutos!
-	- Arrays em Lua começam em 1, e não 0. Assim, o comando FOREACH começa em T[1].
-	- cos() e sin() esperam valores entre 0 e 1 ao invés de 0 e PI * 2. E sin() está invertido.
-	- sgn(0) retorna 1.
-	- Mudando para tela cheia: use alt-enter no OSX (command-F é usado para buscar texto).
+	- Arrays em Lua começam em 1, e não 0. Assim, por exemplo, o comando FOREACH começa em T[1];
+	- cos() e sin() esperam valores entre 0 e 1 ao invés de 0 e PI * 2. E sin() está invertido;
+	- sgn(0) retorna 1;
+	- Mudando para tela cheia: use alt-enter no OSX (command-F é usado para buscar texto);
 	- Quando quiser exportar um cartucho .png, use SAVE e não EXPORT, pois este salvará apenas o spritesheet!
 
 
@@ -280,24 +280,24 @@ Bem vindo(a) ao PICO-8!
 	Digite SPLORE [enter] para iniciar o aplicativo, ou inicie o PICO-8 com o parâmetro -splore. 
 	
 	É possível controlar SPLORE inteiramente com um controle:
-	ESQUERDA e DIREITA navega por listas de cartuchos
-	CIMA e BAIXO seleciona itens em uma lista
-	X,O ou MENU para executar um cartucho
+	- ESQUERDA e DIREITA navegam por listas de cartuchos;
+	- CIMA e BAIXO selecionam itens em uma lista;
+	- X, O ou MENU para executar um cartucho.
 	
-	Enquanto executar um cartucho, pressione MENU para favoritar um cartucho ou voltar para o SPLORE.
+	Enquanto dentro de um cartucho, pressione MENU para favoritar um cartucho ou voltar para o SPLORE.
 	Se estiver usando um teclado, também é possível pressionar F para favoritar um item enquanto estiver
 	na listagem de cartuchos.
 	
-	Equanto estiver vendo uma lista de cartuchos do BBS, use o item no topo para para recarregar a lista
-	de cartuchos. Se estiver offline, a última lista carregada é exibida e ainda será possível jogar
+	Equanto estiver vendo uma lista de cartuchos do BBS, use o item no topo para recarregar a lista.
+	Se estiver offline, a última lista carregada é exibida e ainda será possível jogar
 	qualquer cartucho que você já tenha baixado.
 	
 	Se você estiver usando PICO-8 em uma máquina sem internet, você pode usar o comando INSTALL_GAMES para
-	adicionar uma pequena lista de cartuchos pre-instalados a sua lista de favoritos.
+	adicionar uma pequena lista de cartuchos pre-instalados à sua lista de favoritos.
 	
 
 ============================================================================================
-	Modos do Editor
+	Modos do editor
 ============================================================================================
 	
 	Pressione ESC para alternar entre Terminal e o Editor
