@@ -18,13 +18,13 @@
 Bem vindo(a) ao PICO-8!
 
 	PICO-8 é um console fantasia para fazer, distribuir e jogar pequenos jogos e programas
-	de computador. Quando ligado, a maquina te apresenta um shell (terminal ou console)
+	de computador. Quando ligado, a máquina abre um shell (terminal ou console)
 	para digitar código em Lua diretamente, e fornece ferramentas simples para criar sprites
 	(imagens), maps e áudio.
 	
 	As severas limitações do PICO-8 foram cuidadosamente escolhidas para serem divertidas,
-	encorajar designs pequenos porém expressivos e fornecer aos cartuchos do PICO-8 uma
-	aparência e personalidade particular.
+	encorajarem designs minimalistas porém expressivos, e fornecer aos cartuchos do PICO-8
+	uma aparência e personalidade única.
 	
 	
 :: Teclas
@@ -43,11 +43,11 @@ Bem vindo(a) ao PICO-8!
 
 	Tela: 128x128, palheta de 16 cores fixas
 	Entrada: 6 botões
-	Tamanho do Cartucho: 32k
+	Tamanho do cartucho: 32k
 	Áudio: 4 canais, 64 ruídos definíveis
 	Código: Lua (Máximo 8192 Elementos (tokens))
 	Sprites: Banco com 128 sprites de 8x8 (+ 128 compartilhados)
-	Mapa: 128x32 celulas de 8-bit (+ 128x32 compartilhados)
+	Mapa: 128x32 células de 8-bit (+ 128x32 compartilhados)
 	
 	
 :: Olá Mundo (Hello World)
@@ -59,12 +59,12 @@ Bem vindo(a) ao PICO-8!
 		CIRCFILL(70,90,20,14)
 		FOR I = 1,4 DO PRINT(I) END
 		
-	(Nota: PICO-8 apenas exibe letras em maiúscula.)
+	(Nota: PICO-8 apenas exibe letras em caixa alta.)
 
 	Você pode fazer um preve programa interativo usando comandos como os acima no modo de
 	edição de código junto com as duas funções especiais _UPDATE e _DRAW. Por exemplo, o
 	programa abaixo permite você movimentar um circulo usando as setas do teclado. Pressi-
-	one Esc para entrar no editor de código e digite ou copie e cole o código abaixo:
+	one Esc para entrar no editor de código e digite, ou copie e cole, o código abaixo:
 	
 	X = 64 Y = 64
 	FUNCTION _UPDATE()
@@ -83,23 +83,23 @@ Bem vindo(a) ao PICO-8!
 	Para programas mais complexos veja os demais exemplos de cartuchos.
 	
 
-:: Cartuchos de Exemplos
+:: Cartuchos de exemplo
 
 	Esses cartuchos são parte do PICO-8 e podem ser instalados digitando:
 	INSTALL_DEMOS
 	CD DEMOS
 	
-	API		Demonstra a maioria das funcionaldades do PI
+	API		Demonstra a maioria das funcionaldades do PICO-8
 	JELPI		Jogo demo de plataforma com suporte a dois jogadores
-	CAST		Demo de 2.5D
-	MANDEL		explorador de conjunto de Mandelbrot
+	CAST		Demo de 2,5D
+	MANDEL		Explorador de conjunto de Mandelbrot
 	COLLIDE		Exemplo de detecção de colisão com paredes e atores
-	BUTTERFLY	Coisa triangular sepertinante
+	BUTTERFLY	Triângulo de Sierpinski
 	DRIPPY		Desenha uma linha que escorre
 	STOMPY		Cartucho de música
 	WOO		Cartucho de música
 	
-	Para rodar um cartucho, abra o PICO-8 e digite
+	Para rodar um cartucho, abra o PICO-8 e digite:
 	
 	LOAD JELPI
 	RUN
@@ -113,25 +113,25 @@ Bem vindo(a) ao PICO-8!
 	
 	DIR		lista o diretório atual
 	LS		mesmo que DIR
-	CD BLA		vai para o diretório BLA
+	CD BLA		vai para o diretório "BLA"
 	CD ..		volta para o diretório anterior
 	CD /		volta para o diretório inicial do PICO-8
 	MKDIR		cria um diretório
 	FOLDER		abre o diretório atual com o sistema operacional
 	
-	LOAD BLA	carrega o cartucho BLA
-	SAVE BLA	salva o cartucho BLA
+	LOAD BLA	carrega o cartucho "BLA"
+	SAVE BLA	salva o cartucho "BLA"
 	
-	Para mover arquivos, deletar, duplicar e renomear, é melhor usar o comando FOLDER
+	Para mover, deletar, duplicar e renomear arquivos, é melhor usar o comando FOLDER
 	e então fazer as operações desejadas.
 	
-	O local padrão do drive do PICO-8 são como a seguir:
+	O local padrão do drive do PICO-8 são os seguintes:
 
 	Windows:	C:/Users/Yourname/AppData/Roaming/pico-8/carts
 	OSX: 		/Users/Yourname/Library/Application Support/pico-8/carts
 	Linux: 		~/.lexaloffle/pico-8/carts
 	
-	Você pode trocar isto e outras configurações no arquivo pico-8/config.txt
+	Você pode trocar esta e outras configurações no arquivo pico-8/config.txt.
 	
 	Dica: Se você é um usuário do Dropbox, é possível definir o drive do PICO-8 como sendo
 	uma das pastas compartilhadas do dropbox para poder compartilhar o drive entre várias
@@ -140,7 +140,7 @@ Bem vindo(a) ao PICO-8!
 	
 :: Backups
 
-	Se você sair sem salvar as mudanças, ou sobreescrever um arquivo existente, um backup
+	Se você sair sem salvar as mudanças, ou sobrescrever um arquivo existente, um backup
 	do arquivo é salvo em pico-8/backup.
 	
 	
@@ -155,14 +155,14 @@ Bem vindo(a) ao PICO-8!
 		OSX: 		/Users/Yourname/Library/Application Support/pico-8/config.txt
 		Linux: 		~/.lexaloffle/pico-8/config.txt
 		
-		Use -home para trocar o local padrão para o arquivo config.txt.
+		Use o comando -home (ver abaixo) para trocar o local padrão do arquivo config.txt.
 		
 		
 	:: Linha de comando
 	
-		// Nota: Estes comandos sobreescrevem o que está no config.txt
+		// Nota: Estes comandos sobrescrevem o que está no config.txt.
 	
-		pico-8 [opções] [arquivo.p8]
+		pico-8 [comando] [arquivo.p8]
 	
 		-run                Carrega arquivo.p8 ao iniciar o Pico-8.
 		-width n            Define a largura da janela e ajusta a proporção se esta não for especificada.
@@ -170,11 +170,11 @@ Bem vindo(a) ao PICO-8!
 		-scale n            Define o tamanho de cada pixel no PICO-8. "-scale 3" define os pixels como 3x3.
 		-windowed n         Define se PICO-8 será exibido em tela cheia (0) ou em uma janela (1).
 		-sound n            Define o volume entre 0 e 256.
-		-music n            Define volume da música entre 0 e 256.
-		-joystick n         Define controle para o jogador n (0..7).
+		-music n            Define o volume da música entre 0 e 256.
+		-joystick n         Define o controle para o jogador n (0..7).
 		-aspect n           Define o aspecto do pixel. 420 para 1:1 (padrão), 560 para 4:3, 525 para 5:4. 
 		-run filename       Carrega e executa um cartucho.
-		-splore             Carrefa em modo "splore".
+		-splore             Carrega em modo "splore".
 		-home path          Define o caminho para o arquivo config.txt e outros arquivos de configuração.
 		-gif_len n          Define tamanho máximo para criar gifs em segundos (1..120).
 		
@@ -182,8 +182,8 @@ Bem vindo(a) ao PICO-8!
 	:: Configuração de controle
 	
 		PICO-8 usa o esquema de controle conhecido como SDL2. Ele detecta controles comuns ao iniciar e
-		busca um mapeamento customizado para os botões em sdl_controllers.txt no mesmo diretório onde está 
-		o config.txt. sdl_controllers.txt tem um mapeamento por linha.
+		busca um mapeamento customizado para os botões em sdl_controllers.txt, no mesmo diretório onde está 
+		o config.txt. sdl_controllers.txt possui um mapeamento por linha.
 	
 		Para gerar um mapeamento para seu controle, use o programa controllermap que vem com o SDL2, ou
 		experimente a ferramenta do site http://www.generalarcade.com/gamepadtool/
@@ -201,13 +201,13 @@ Bem vindo(a) ao PICO-8!
 
 			http://www.lexaloffle.com/pico-8.php?page=submit
 
-		Veja save() para dicas de como gerar uma versão .p8.png. (procure por .png)
+		Veja save() para dicas de como gerar uma versão .p8.png. (procure por .png).
 
-		3. Exporte o cartucho no formato html5:
+		3. Exporte o cartucho no formato HTML5:
 		
 			EXPORT FOO.HTML
 			
-			Este comando gerará dois arquivos: foo.html 3 foo.js (você vai precisar de ambos!)
+			Este comando gerará dois arquivos: foo.html e foo.js (você vai precisar de ambos!)
 			
 			Você pode usar e distribuir cartuchos como quiser, contanto que você tenha permissão
 			do autor e contribuintes.
