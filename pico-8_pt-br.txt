@@ -769,146 +769,113 @@ printh str
 	Gráficos
 --------------------------------------------------------------------------------------------
 
-	PICO-8 possui um banco único de 128 8x8 sprites, mais um adicional de 128 que sobrepõe
+	PICO-8 possui um banco único de 128 sprites 8x8, mais um adicional de 128 que sobrepõe
 	a metade inferior dos dados de mapa ("dados compartilhados"). estes 256 sprites são chamados
-	coletivamente de spritesheet e podem ser encarados como uma imagem de 128 por 128 pixels.
+	coletivamente de spritesheet e podem ser vistos como uma imagem de 128 por 128 pixels.
 
 	Todas as operações de desenho do PICO-8 estão sujeitas ao draw-state atual. O draw-state
-	inclue posição da câmera (para movimento das cordenadas), mapeamento de cores (para mudar as
-	cores de um sprite), corte retângular e cor de desenho, que podem ser redefinidas por qualquer
-	função opcionalmente, persistindo caso contrário.
+	inclue posição da câmera (para movimento das coordenadas), mapeamento de cores (para mudar as
+	cores de um sprite), corte retangular e cor de desenho, que podem ser redefinidas opcionalmente
+	por qualquer função, mas sempre persistindo.
 
-	o draw-state é reiniciado toda a vez que o programa é executado. é o equivalente a invocar:
+	o draw-state é reiniciado toda vez que o programa é executado. É o equivalente a chamar:
 	clip() camera() pal() color()
 
 	Índice de cores:
 	
-	 0  preto	 1  azul_escuro		 2  roxo_escur		 3  verde_escuro  
+	 0  preto	 1  azul_escuro		 2  roxo_escuro		 3  verde_escuro  
 	 4  marrom	 5  cinza_escuro	 6  cinza_claro		 7  branco
 	 8  vermelho	 9  laranja		10  amarelo		11  verde       
-	12  azul   	13  indigo     		14  rosa		15  pêssego
+	12  azul   	13  índigo     		14  rosa		15  pêssego
 
 
 clip [x y w h]
-
-	Define o corte da tela para a região definida em pixels
-	clip() para retornar ao padrão
-	
+	Define o corte da tela para a região definida em pixels;
+	clip() para retornar ao padrão.
 	
 pget x y
 pset x y [c]
-
 	Recupera ou define a cor (c) de um pixel na posição x, y.
-	
 	
 sget x y
 sset x y [c]
-
-	Recupera ou define a cor (c) de um pixel no spritesheet.
-	
+	Recupera ou define a cor (c) de um pixel do spritesheet.
 	
 fget n [f]
 fset n [f] v
-
-	Recupera ou define o valor (v) da flag de um sprite
-	f é o índice da flag de 0..7
-	v é um boleando, podendo ser TRUE ou FALSE
+	Recupera ou define o valor (v) da flag de um sprite;
+	f é o índice da flag de 0..7;
+	v é um boleano, podendo ser TRUE ou FALSE.
 	
 	O valor inicial das flags é definível pelo editor de sprites,
-	usando a linha de botões circulares coloridos.
+	utilizando a linha de botões circulares coloridos.
 	
-	O significado de uma flag de sprite está a cargo do usuário, podem ser,
-	por exemplos, usados para indicar um grupo de sprites.
+	O significado de uma flag de um sprite está a cargo do usuário, podendo ser,
+	por exemplo, usadas para classificar diferentes sprites dentro de um mesmo grupo.
 
-	Se a flag for omitida da chamada da função, todas as flags são recuperadas ou definidas
-	fset(2, 1+2+8)   -- define bits 0,1 e 3
-	fset(2, 4, true) -- define bit 4
+	Se a flag for omitida da chamada da função, todas as flags são recuperadas ou definidas:
+	fset(2, 1+2+8)   -- define bits 0, 1 e 3
+	fset(2, 4, true) -- define o bit 4
 	print(fget(2))   -- 27 (1+2+8+16)
 
-
 print str [x y [col]]
-
-	Imprime uma palavra na tela.
-	Se apenas a palavra for passada como parâmetro e chegar ao fim da linha,
-	a tela rolará para abrir espaço para uma nova linha.
-
+	Imprime texto na tela;
+	Se apenas o text for passado como parâmetro e chegar ao fim da tela,
+	o texto ganhará um estilo de rolagem vertical automaticamente.
 
 cursor x y
-
-	Define a posição do cursos e margem
-
+	Define a posição do ponteiro e da margem.
 
 color col
+	Define o valor padrão de cor que será usada em funções de desenho.
 
-	Define valor padrão de cor para ser usada em funções de desenho
-	
-	
 cls
-
-	limpa a tela
-
+	limpa a tela.
 
 camera [x y]
-
-	Move a câmera para uma posição -x, -y para todas as operações de desenho
-	camera() para retornar ao padrão
-	
+	Coloca a câmera na posição x, y para todas as operações de desenho;
+	camera() para retornar ao padrão.
 	
 circ     x y r [col]
 circfill x y r [col]
-
-	Desenha ou preenche um círculo na posição x,y com raio r
-
+	Desenha ou preenche um círculo na posição x, y com raio r.
 
 line x0 y0 x1 y1 [col]
-
-	desenha uma linha
-
+	desenha uma linha.
 
 rect     x0 y0 x1 y1 [col]
 rectfill x0 y0 x1 y1 [col]
-
-	desenha ou preenche um retângulo
-	
+	desenha ou preenche um retângulo.
 
 pal c0 c1 [p]
+	Desenha todas as instâncias da cor c0 como cor c1.
 
-	Desenha todas as instâncias da cor c0 como cor c1
-
-	pal() para retornar ao padrão (incluíndo transparência)
+	pal() para retornar ao padrão (incluíndo transparência);
 	Dois tipos de palhetas (p; padrão 0)
-		0 palheta de desenho	: cores são remapeadas ao desenhar// ex. para recolorir sprites
-		1 palheta de tela	: cores são remapeadas na tela    // ex. para escurecer
-	c0 índice da cor original 0..15
-	c1 índice da cor a ser aplicada
+		0 palheta de desenho	-- cores são remapeadas ao desenhar; ex.: para recolorir sprites
+		1 palheta de tela	-- cores são remapeadas na tela; ex.: para escurecer a tela
+	c0 índice da cor original 0..15;
+	c1 índice da cor a ser aplicada.
 	
-
 palt c t
-
-	Define a transparência de uma cor c a um valor t (boleano)
-	Transparência é respeitada por spr(), sspr() e map()
-	ex. palt(8, true) -- pixels vermelhos não são desenhados
-	palt() para retornar ao padrão: todas as cores ficam opacas, exceto preto 0
+	Define a transparência de uma cor c a um valor t (boleano);
+	Transparência é respeitada por spr(), sspr() e map();
+	Ex.: palt(8, true) -- pixels vermelhos não serão desenhados
+	palt() para retornar ao padrão: todas as cores ficam opacas, exceto a cor 0 (preto).
 	
-
-
 spr n x y [w h] [flip_x] [flip_y]
-
-	Desenha o sprite n (0..255) na posição x,y
-	largura e altura (h,w) são 1,1 po padrão e define de quantos sprites a imagem é composta.
-	a cor 0 é transparente por padrão. Usar palt() para alterar.
-	flip_x=true para espelhar horizontalmente
-	flip_y=true para espelhar verticalmente
-
+	Desenha o sprite n (0..255) na posição x, y;
+	Largura e altura (h, w) são (1, 1) por padrão e define o que será exibido do spritesheet;
+	A cor 0 é transparente por padrão. Usar palt() para alterar;
+	flip_x=true para espelhar horizontalmente;
+	flip_y=true para espelhar verticalmente.
 
 sspr sx sy sw sh dx dy [dw dh] [flip_x] [flip_y]
-
-	pega um retângulo no spritesheet (definido por sx, sy, sw, sh) // em pixels
-	e desenha no retângulo (definido por dx, dy, dw, dh)
-	a cor 0 é transparente por padrão.
-	flip_x=true para espelhar horizontalmente
-	flip_y=true para espelhar verticalmente
-	flip_y=true to flip vertically
+	Pega um retângulo no spritesheet (definido por sx, sy, sw, sh) -- em pixels
+	E desenha no retângulo (definido por dx, dy, dw, dh);
+	A cor 0 é transparente por padrão;
+	flip_x=true para espelhar horizontalmente;
+	flip_y=true para espelhar verticalmente;
 
 
 --------------------------------------------------------------------------------------------
@@ -917,9 +884,8 @@ sspr sx sy sw sh dx dy [dw dh] [flip_x] [flip_y]
 	
 	
 add t v
-
-	Adiciona v ao final da tabela t.
-	Equivalente a t[#t+1] = v
+	Adiciona v ao final da tabela t;
+	Equivalente a t[#t+1] = v:
 
 		FOO={}        -- cria tabela vazia
 		ADD(FOO, 11)
@@ -927,11 +893,10 @@ add t v
 		PRINT(FOO[2]) -- 22
 
 del t v
-
-	Apaga a primeira instância do valor v da tabela t
-	Os valores restantes são realocados para evitar buracos.
+	Apaga a primeira instância do valor v da tabela t;
+	Os valores restantes são movidos para evitar buracos;
 	Perceba que v é o valor de um item a ser deletado, não o índice na tabela!
-	del() pode ser chamada com segurança ao iterar pelos elementos de uma tabela.
+	del() pode ser chamada com segurança ao iterar pelos elementos de uma tabela:
 
 		A={1,10,2,11,3,12}
 		FOR ITEM IN ALL(A) DO
@@ -940,9 +905,7 @@ del t v
 		FOREACH(A, PRINT) -- 10,11,12
 		PRINT(A[3])       -- 12
 
-
 all t
-
 	Usado dentro de repetições do tipo FOR para iterar entre todos os elementos de uma tabela,
 	contanto que o índice seja numérico.
 	
@@ -952,19 +915,15 @@ all t
 		FOR V IN ALL(T) DO PRINT(V) END -- 11 12 13 14 HI
 		PRINT(#T) -- 5
 
-
 foreach t f
-
-	para cada item na tabela t, execute a função f usando o item como parâmetro.
+	Para cada item na tabela t, execute a função f usando o item como parâmetro:
 	
 		FOREACH(T, PRINT)
 
-
 pairs t
-
 	Usada para iterar entre os elementos de uma tabela, retornando tanto a chave
-	quanto o valor de cada item.
-	Ao contrário de all(), pairs() itera todos os elementos independente do tipo de índice.
+	quanto o valor de cada item;
+	Ao contrário de all(), pairs() itera todos os elementos independente do tipo de índice:
 	
 		T = {["HELLO"]=3, [10]="BLAH"}
 		T.BLUE = 5;
@@ -974,9 +933,9 @@ pairs t
 
 	Resultado:
 		
-		K: 10  v:BLAH
+		K: 10     v:BLAH
 		K: HELLO  v:3
-		K: BLUE  v:5
+		K: BLUE   v:5
 
 
 --------------------------------------------------------------------------------------------
@@ -984,25 +943,23 @@ pairs t
 --------------------------------------------------------------------------------------------
 
 btn [i [p]]
-
-	Recupera o estado do botão i para o jogador p (default 0)
-	i: 0..5: esquerda direita cima baixo botão_o botão_x
-	p: index do jogador 0..7
+	Recupera o estado do botão i para o jogador p (padrão 0):
 	
-	Se nenhum parametro for dado, retorna o resultado de todos os 12 botões para
-	os jogadores 0 e 1
+	i: 0..5 --> esquerda, direita, cima, baixo, botão_o, botão_x;
+	p: 0..7 --> índice do jogador.
+	
+	Se nenhum parâmetro for dado, retorna o resultado de todos os 12 botões para
+	os jogadores 0 e 1;
 		// P0: bits 0..5  P1: bits 8..13
 	
 	Mapeamento padrão do teclado para os comandos dos jogadores:
-		jogador 0: Setas, Z,X / C,V / N,M
-		jogador 1: ESDF, LSHIFT,A / TAB,Q,E
-
+		jogador 0: Setas, Z, X / C, V / N,M 
+		jogador 1: ESDF, LSHIFT, A / TAB, Q, E
 
 btnp [i [p]]
-
-	O mesmo que btn(), com a diferença que apenas retorna TRUE se o botão não foi precionado no
-	frame anterior. btnp() também retorna verdadeiro para cada 4 frames após se segurar um 
-	botão pressionado por 15 frames.
+	O mesmo que btn(), com a diferença que retorna somente VERDADEIRO se o botão não foi pressionado
+	no quadro anterior. btnp() também retorna VERDADEIRO para cada 4 quadros após se segurar um 
+	botão pressionado por 15 quadros.
 	
 	Útil para comandos em menu ou "Pressione uma tecla pra continuar".
 
@@ -1011,29 +968,26 @@ btnp [i [p]]
 	Áudio
 --------------------------------------------------------------------------------------------
 
-sfx n [canal [atrazo]]
-
-	reproduz SFX n no canal (0..3) com um atrazo (0..31)
-	n -1 para parar o som no canal
-	n -2 para impedir que o som em um canal repita
-	Qualquer música sendo tocada no canal será interrompida
-	atrazo na nota (0..31)
+sfx n [canal [atraso]]
+	Reproduz SFX n no canal (0..3) com um atraso (0..31);
+	n: -1 para parar o som no canal;
+	n: -2 para impedir que o som em um canal repita;
+	Qualquer música sendo tocada no canal será interrompida;
+	Atraso na nota (0..31).
 	
-	canal -1 (default) para automaticamente escolher um canal que não esteja em uso
+	canal: -1 (padrão) para automaticamente escolher um canal que não esteja em uso.
 		// Se nada tocar, verifique se você deu parâmetros de canal para music()
-		// para que músicas não ocupem todos os canais. (ex. 1+2 para os primeiros 2 canais) 
-
+		// para que músicas não ocupem todos os canais (ex.: 1+2 para os primeiros 2 canais) 
 
 music [n [duração_fade [canais]]]
-
-	reproduz música do modelo n (0..63)
-	n -1 para parar a música
-	duração_fade em milissegundos (padrão: 0)
-	canais especifica quais canais serão usados apenas pela música
-		ex. para tocar nos canais 0, 1 e 2: 1+2+4 = 7
+	Reproduz música do modelo n (0..63);
+	n: -1 para parar a música;
+	duração_fade: em milissegundos (padrão: 0);
+	canais: especifica quais canais serão usados apenas pela música.
+		ex.: para tocar nos canais 0, 1 e 2: 1+2+4 = 7
 		
 	Canais reservados ainda podem ser utilizados para tocar SFX, mas apenas quando requerido
-	expecificamente pela função sfx().
+	especificamente pela função sfx().
 
 
 --------------------------------------------------------------------------------------------------------
@@ -1042,20 +996,20 @@ music [n [duração_fade [canais]]]
 
 mget x y
 mset x y v
-
-	Recupera ou define o valor do mapa v na posi,ão x,y
+	Recupera ou define o valor do mapa v na posição x, y.
 
 map cel_x cel_y sx sy cel_w cel_h [layer]
 
-	desenha sessão de mapa (em celulas) na posição da tela sx,sy (em pixels)
-	se uma camada for definida, apenas células com a mesma flag serão desenhadas
-		// Bitfield. Então 0x5 significa que desenhará apenas sprites com bit 0 e 2 definidos.
-		// padrão usa todos os sprites.
+	Desenha sessão de mapa (em células) na posição da tela sx, sy (em pixels);
+	Se uma camada for definida, apenas células com a mesma flag serão desenhadas.
+		// Bitfield. Então 0x5 significa que desenhará apenas sprites com bit 0 e 2 definidos
+		// Por padrão utiliza todos os sprites
 	
-	Excessão: sprite 0 sempre é usado como vazio.
+	Excessão: sprite 0 sempre é usado como vazio:
 	
-	ex. map(0,0, 20,20, 4,2)
-	-> desenha um bloco de 4x2 blocos de celulas começando em 0,0 no mapa ate a posição 20,20
+		map(0,0, 20,20, 4,2)
+		// desenha um bloco de células 4x2 começando em 0, 0 no mapa ate a posição 20, 20
+	
 	
 --------------------------------------------------------------------------------------------------------
 	Memória
@@ -1063,18 +1017,18 @@ map cel_x cel_y sx sy cel_w cel_h [layer]
 
 PICO-8 possui três tipos de memória:
 
-	1. RAM base (32k): veja o layout abaixo. Acesse com peek() poke() memcpy() e memset()
-	2. ROM do cartucho: o mesmo que o layout de base até 0x4300. Copie do cartucho para base com reload()
+	1. RAM base (32k): veja o layout abaixo. Acesse com peek(), poke(), memcpy() e memset();
+	2. ROM do cartucho: o mesmo que o layout de base até 0x4300. Copie do cartucho para base com reload();
 	3. RAM Lua (1MB): programa compilado + variáveis. Não dê atenção ao homem atrás das cortinas.
 
-	Nota técnica: // Você provavelmente não precisa saber disto
-	enquanto usa o editor, os dados sendo modificados ficam no ROM do cartucho, mas funções da API como
-	spr() e sfx() operam na RAM base. PICO-8 automaticamente copia do rom para a ram base ( invoca
+	Nota técnica: 		// Você provavelmente não precisa saber disto
+	Enquanto usa o editor, os dados sendo modificados ficam no ROM do cartucho, mas funções da API, como
+	spr() e sfx(), operam na RAM base. PICO-8 automaticamente copia do rom para a ram base (chama
 	reload()) em três casos:
 
-		1. Quando o cartucho é carregado (from 0.1.6)
-		2. Quando o cartucho é rodado
-		3. quando saindo de qualquer mono do editor
+		1. Quando um cartucho é carregado (a partir da versão 0.1.6);
+		2. Quando um cartucho é executado;
+		3. Quando saindo de qualquer um dos editores.
 
 
 :: Layout da RAM Base
@@ -1091,49 +1045,43 @@ PICO-8 possui três tipos de memória:
 	0x5f80 pinos gpio (128 bytes) // em desenvolvimento
 	0x6000 tela (8k)
 
-	dados do usuário não possuem propósito definido e podem ser usados via memcpy(), peek() e poke().
+	Dados do usuário não possuem propósito definido e podem ser usados via memcpy(), peek() e poke();
 	Dados persistentes do cartucho estão mapeados entre 0x5e00 e 0x5eff, porém apenas serão salvos se a
-	função cartdata() for chamada.
+	função cartdata() for chamada;
 	O formato de cor (gfx/screen) é definido em dois pixels por byte: bits inferiores codificam os
-	pixels a esquerda de cada par.
+	pixels à esquerda de cada par;
 	O formato do mapa é um byte por célula, onde o byte normalmente armazena o índice de um sprite.
-
 
 peek addr
 poke addr val
-
-	Le e escreve um byte para um endereço na RAM base.
-	Endereços permitidos são 0x0..0x7fff
-	Tentar ler ou escrever fora do limite causa erro
+	Lê e escreve um byte para um endereço na RAM base;
+	Endereços permitidos são: 0x0..0x7fff;
+	Tentar ler ou escrever fora do limite gera um erro.
 
 memcpy endereço_destino endereço_origem len
-
-	Copia uma quantidade de len bytes na RAM base do endereço_origem para o endereço_destino
-	Sections can be overlapping
+	Copia uma quantidade de len bytes na RAM base do endereço_origem para o endereço_destino;
+	Seções podem se sobrepor.
 
 reload endereço_destino endereço_origem len [arquivo]
-
-	O mesmo que memcpy, mas copia a partir da ROM do cartucho
-	A sessão de código ( >= 0x4300) é protegida e não pode ser lida.
-	Se for passado um nome de arquivo, os dados são copiados de um cartucho diferente
+	O mesmo que memcpy, mas copia a partir da ROM do cartucho;
+	A sessão de código (>=0x4300) é protegida e não pode ser lida;
+	Se for passado um nome de arquivo, os dados são copiados de um cartucho diferente.
 
 cstore endereço_destino endereço_origem len [arquivo]
-
-	o mesmo que memcpy, mas salva da RAM base para a ROM do Cartucho
-	cstore() equivale a cstore(0, 0, 0x4300)
-	Pode ser usado para escrever ferramentas para construir cartuchos ou para visualizar o estado
-	do mapa / spritesheet usado no editor de mapas ? editor de gráficos.
-	A sessão de código ( >= 0x4300) é protegida e não pode ser lida.
+	O mesmo que memcpy, mas salva da RAM base para a ROM do cartucho;
+	cstore() equivale a cstore(0, 0, 0x4300);
+	Pode ser usado como método de escrita para construir cartuchos ou para visualizar
+	o estado do mapa / spritesheet utilizando o editor de mapas e o editor de spritesheet;
+	A sessão de código (>=0x4300) é protegida e não pode ser lida.
 	
-	Se for passado um nome de arquivo, os dados são escritos nesse cartucho em disco.
-	Podem ser escritos em até 64 cartuchos por sessão.
-	Veja a sessão 'Dados do Cartucho' para informações adicionais de como usar cstore.
+	Se for passado um nome de arquivo, os dados são escritos nesse cartucho em disco;
+	Podem ser escritos em até 64 cartuchos por sessão;
+	Veja a sessão "Dados do cartucho" para informações adicionais de como usar cstore.
 	
 	
 memset endereço_destino val len
-
 	Define os len bytes para o valor val
-	(função rápida -- pode ser usada para desenhar scanlines horizontais, etc)
+	(função rápida; pode ser usada para desenhar scanlines horizontais etc.).
 	
 
 --------------------------------------------------------------------------------------------------------
@@ -1143,23 +1091,19 @@ memset endereço_destino val len
 max x y
 min x y
 mid x y z
-
-	Retorna o máximo, mínimo ou termo no meio dentre os parametros
-	Por exemplo, mid(7,4,10) retorna 7
+	Retorna o máximo, mínimo ou o valor médio dentre os parâmetros;
+	Por exemplo, mid(7,4,10) retorna 7.
 
 flr x
-
 	Retorna o inteiro mais próximo e menor que x // x-(x%1) 
 	flr(4.1)  --> 4
 	flr(-2.3) --> -3.0
 
-
 cos x
 sin x
-
-	Retorna cosseno de x, onde 1.0 indica um círculo
-	Seno é invertido para se adequar a tela
-	ex.: sin(0.25) retorna -1
+	Retorna cosseno de x, onde 1.0 indica um círculo;
+	Seno é invertido para se adequar à tela;
+	Por exemplo: sin(0.25) retorna -1.
 
 	Se você prefere trabalhar com radianos e sem a inversão de y, copie e cole o trecho a seguir
 	próximo ao início do programa:
@@ -1167,31 +1111,26 @@ sin x
 	cos1 = cos function cos(angle) return cos1(angle/(3.1415*2)) end
 	sin1 = sin function sin(angle) return sin1(-angle/(3.1415*2)) end
 	
-
 atan2 dx dy
-
-	Converte dx, dy em ângulos entre 0..1
-	Assim como seno e cosseno, angulos incrementam em sentido anti-horário
-	ex.: atan(1, -1) retorna 0.125
+	Converte dx, dy em ângulos entre 0..1;
+	Assim como seno e cosseno, ângulos incrementam em sentido anti-horário;
+	Por exemplo: atan(1, -1) retorna 0.125.
 
 sqrt x
-
-	Retorna a raíz quadrada de x
+	Retorna a raíz quadrada de x.
 	
 abs x
-
-	Retorna o módulo (valor positivo) de x
+	Retorna o módulo (valor positivo) de x.
 
 rnd x
-	Retorna um número ateatório n, sendo 0 <= n < x
-	Se você quiser um inteiro, use flr(rnd(x))
+	Retorna um número ateatório n, sendo 0 <= n < x;
+	Se você quiser um inteiro, use flr(rnd(x)).
 	
 srand x
-	Define o gerador de números aleatórios
-	O gerador é criado aleatóriamente quando o cartucho inicia
+	Define a semente do gerador de números aleatórios;
+	A semente é gerada automaticamente quando o cartucho inicia.
 
 Operadores binários
-
 	band x y
 	bor  x y
 	bxor x y
@@ -1208,47 +1147,45 @@ Operadores binários
 
 menuitem índice [título callback]
 
-	Adiciona um novo ítem ao menu de pausa
+	Adiciona um novo item ao menu de pausa.
 	
-	Índice deve estar entre 1..5 e determina a ordem na qual os ítems serão desenhados
-	Título deve ser uma palavra de até 16 caracteres
-	callback é uma função a ser invocada pelo cartucho
+	Índice deve estar entre 1..5 e determina a ordem na qual os ítems serão desenhados;
+	Título deve ser uma palavra de até 16 caracteres;
+	callback é uma função a ser invocada pelo cartucho.
 	
-	Quando nenhum título ou função são definidos, o item de menu é removido
+	Quando nenhum título ou função são definidos, o item de menu é removido.
 	
-	ex.:
-	menuitem(1, "reinicia fase", function() reset_puzzle() sfx(10) end)
+	Ex.:
+	menuitem(1, "Reiniciar fase", function() reset_puzzle() sfx(10) end)
 	
 
 --------------------------------------------------------------------------------------------------------
-	Strings (palavras)
+	Texto
 --------------------------------------------------------------------------------------------------------
 
-	s = "the quick brown fox"
+	s = "Um pequeno jabuti xereta viu dez cegonhas felizes"
 	
 	-- comprimento
 	
-		print(#s)          --> 19
-	
+		print(#s)          --> 49
 	
 	-- juntando palavras
 		
 		print("dois "..4) --> "dois 4"
 	
-	
 	-- sub() para pegar parte de uma palavra
 	
-		print(sub(s,5,9))  --> "quick"
-		print(sub(s,5))  --> "quick brown fox"
+		print(sub(s,12,17))  --> "jabuti"
+		print(sub(s,12))     --> "jabuti xereta viu dez cegonhas felizes"
 
 
 --------------------------------------------------------------------------------------------
-	Dados do Cartucho
+	Dados do cartucho
 --------------------------------------------------------------------------------------------
 
 	Cada cartucho pode salvar 64 números (256 bytes) de dado persistente no PICO-8
 	do usuário (ao invés de no cartucho propriamente dito). Isto pode ser usado para
-	salvar coisas como récordes ou salvar o progresso do jogador.
+	salvar coisas como recordes ou salvar o progresso do jogador.
 	
 	Se você precisar de mais do que 256 bytes, é possível escrever diretamente no
 	cartucho usando cstore(). A desvantagem é que esta informação estará amarrada
@@ -1256,22 +1193,21 @@ menuitem índice [título callback]
 	perderá o jogo salvo.
 	
 	Outra alternativa é escrever em um segundo cartucho passando um quarto parâmetro
-	a função cstore(). Para isso será necessário a troca de cartuchos, o que torna
-	o processo lento, e deixa licho de cartuchpos quando executado em uma
+	à função cstore(). Para isso será necessário a troca de cartuchos, o que torna
+	o processo lento, e deixa para trás arquivos "lixo" quando executado em uma
 	pasta local.
 
 
 cartdata id
-
-	Invoque esta função uma vez assim que o cartucho iniciar. O parâmetro id é uma palavra
+	Chame esta função uma vez assim que o cartucho iniciar. O parâmetro id é uma palavra
 	de até 64 caracteres e deve ser incomum o suficiente para que outros cartuchos não 
 	tenham, acidentalmente, o mesmo id.
 	
 	Ex.: cartdata("zep_jelpi")
 	
-	Caracteres permitidos são a..z, 0..9 e subtraço(_)
+	Caracteres permitidos são a..z, 0..9 e subtraço(_).
 
-	retorna verdadeiro se os dados foram carregados.
+	Retorna verdadeiro se os dados foram carregados.
 
 	cartdata não pode ser invocada mais de uma vez por execução do cartucho.
 	
@@ -1280,21 +1216,19 @@ cartdata id
 	
 	
 dget índice
-
-	Recupera o número armazenado no índice (0..63)
-	Use apenas após invocar cartdata()
+	Recupera o número armazenado no índice (0..63);
+	Use apenas após invocar cartdata().
 
 dset índice valor
-
-	Define o número a ser salvo no índice (0..63)
-	Use apenas após invocar cartdata()
+	Define o número a ser salvo no índice (0..63);
+	Use apenas após invocar cartdata().
 	
-	Não é necessário confirmar dados escritos -- eles são automaticamente salvos no
-	armazenamento permanente mesmo que seja feito usando POKE().
+	Não é necessário confirmar dados escritos; eles são automaticamente salvos no
+	armazenamento permanente mesmo que seja feito usando poke().
 	
 
 ------------------------------------------------------------------------------------------------------------
-	Histórico de Versão
+	Histórico de versões
 ------------------------------------------------------------------------------------------------------------
 
 	v0.1.8
@@ -1642,6 +1576,3 @@ dset índice valor
 	v0.0.1 
 
 		Primeiro Alpha
-
-
-
