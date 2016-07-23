@@ -594,7 +594,7 @@ Para mais detalhes, ou para saber mais sobre o Lua oficial, visite www.lua.org.
 	A[2] = 42
 	A["FOO"] = {1,2,3}
 
-	-- Arrays começam com índice um por padrão
+	-- Arrays começam com índice 1 por padrão
 	
 	A = {11,12,13,14}
 	PRINT(A[2]) -- 12
@@ -603,13 +603,13 @@ Para mais detalhes, ou para saber mais sobre o Lua oficial, visite www.lua.org.
 	
 	PRINT(#A)   -- 4
 	
-	-- Índices que são palavras podem ser escritas com a notação de ponto
+	-- Índices que são strings podem ser escritos com a notação de ponto
 	
 	PLAYER = {}
 	PLAYER.X = 2 -- equivale a PLAYER["X"]
 	PLAYER.Y = 3
 
-	-- veja também tabelas nas referências de API abaixo.
+	-- Veja também a seção de tabelas tabelas nas referências de API
 
 	
 :: Abreviações no PICO-8
@@ -621,8 +621,7 @@ Para mais detalhes, ou para saber mais sobre o Lua oficial, visite www.lua.org.
 	IF (NOT B) I=1 J=2
 	
 	-- É equivalente a: IF (NOT B) THEN I=1 J=2 END
-	-- Note que o condicional DEVE estar entre parênteses.
-	
+	-- Note que o condicional DEVE estar entre parênteses
 	
 	2. Operadores matemáticos unários
 	
@@ -642,15 +641,15 @@ Para mais detalhes, ou para saber mais sobre o Lua oficial, visite www.lua.org.
 	API (Interface de Programação de Aplicação)
 ============================================================================================
 
-	PICO-8 é construido sobre a linguagem de programação Lua scripting language, porém não
-	inclui a biblioteca padrão. Ao invés disto, uma pequena API é oferecida para manter o
-	design minimalista e o espaço limitado da tela do PICO-8. Para um exemplo de um programa
-	que usa a maioria das funções da API, veja /DEMOS/API.P8 
+	PICO-8 é construído sobre a linguagem de programação Lua, porém não inclui a biblioteca
+	padrão. Ao invés disto, uma pequena API é oferecida para manter o design minimalista e
+	o espaço limitado da tela do PICO-8. Para um exemplo de um programa que usa a maioria
+	das funções da API, veja /DEMOS/API.P8.
 	
 	Funções serão escritas seguindo o padrão abaixo:
-	nome_da_função parametros [parametros_opcionais]
+	nome_da_função parâmetros [parâmetros_opcionais]
 
-	Funções de sistema chamadas por linha de comando podem omitir parenteses e aspas:
+	Funções de sistema chamadas por linha de comando podem omitir parênteses e aspas:
 	load blah.p8 --> load("blah.p8")
 
 	
@@ -661,40 +660,40 @@ Para mais detalhes, ou para saber mais sobre o Lua oficial, visite www.lua.org.
 
 load nome_arquivo
 save nome_arquivo
-	Carrega ou salva um cartucho
+	Carrega ou salva um cartucho.
 	
-	Use ".png" para salvar um cartucho no formato png -- caso contrário, o formato texto (".p8") é usado.
+	Use ".png" para salvar um cartucho no formato png, caso contrário, o formato de texto (".p8") será utilizado.
 	
-	O ".p8" pode ser omitido em ambos os casos, e será automaticamente adicionado
+	O ".p8" pode ser omitido em ambos os casos, e será automaticamente adicionado:
 		save("blah") --> save("blah.p8")
 		save("blah.png") --> save("blah.p8.png")
 		load("blah.png") --> load("blah.p8.png") (se blah.png não existir!)
 	
 	O mesmo vale para carregar. Se um arquivo não é encontrado, PICO-8 tentará novamente com ".p8".
 	
-	O ".png" também pode ser omitido, mas apenas ao carregar
+	O ".png" também pode ser omitido, mas apenas ao carregar:
 		load ("blah") --> tenta carregar "blah.p8.png" e então "blah.png" se "blah.p8" não existir
 	
-	Assim que um cartucho for carregado ou salvo, ele também pode ser salvo usando CTRL+S
+	Assim que um cartucho for carregado ou salvo, ele também pode ser salvo usando CTRL+S.
 
 
-	:: Salvando cartuchos .png com um Título e uma imagem
+	:: Salvando cartuchos .png com um título e uma imagem
 	
-	Para gerar uma imagem a ser salvada com o cartucho, execute o programa e pressione F7 para 
+	Para gerar uma imagem a ser salva com o cartucho, execute o programa e pressione F7 para 
 	capturar a imagem que estiver na tela. As primeiras duas linhas do programa começando com
-	'--' também serão desenhadas no cartucho como Título do cartucho.
+	'--' também serão exibidas no cartucho como título do cartucho.
 
-	Ex.
+	Ex.:
 	-- OCEAN DIVER LEGENDS
-	-- BY LOOPY
+	-- POR LOOPY
 	
 	
 	:: Restrições no tamanho do código para o formato .png
 	
-	Quando salvando no formato .png, o tamanho compactado do arquivo deve ser menor que 15360 bytes. Para
+	Quando salvando no formato .png, o tamanho compactado do arquivo deve ser menor que 15.360 bytes. Para
 	verificar o tamanho do código, use o comando INFO. O tamanho compactado não é forçado quando usando o
-	formato .p8. Na maioria dos casos, você não precisa se preocupar com o tamanho compactado já que o
-	limite de tokens (8192) é alcançado antes.
+	formato .p8. Na maioria dos casos, não é necessário se preocupar com o tamanho compactado já que o
+	limite de tokens (8192) é atingido antes.
 
 
 folder
@@ -704,8 +703,8 @@ ls
 	lista todos os arquivos na pasta atual.
 
 run
-	Executa um programa a partir do início.
-	Pode ser chamado dentro do programa para ressetar o cartucho.
+	Executa um programa do seu início.
+	Pode ser chamado dentro do programa para resetar o cartucho.
 
 resume
 	Executa a partir do último estado do cartucho (flakey).
@@ -715,16 +714,16 @@ reboot
 	Útil para começar um novo projeto.
 
 stat x
-	x:0 retorna o uso de memória do Lua (0..1024MB)
-	x:1 retorna o uso de CPU no último frame (1.0 significa 100% a 30fps)
+	x = 0; retorna o uso de memória do Lua (0..1024MB).
+	x = 1; retorna o uso de CPU no último frame (1.0 significa 100% a 30FPS).
 
 info
-	Imprime algumas informações sobre o cartucho:
-	Tamanho do código, tokens, tamanho compactado
+	Imprime algumas informações sobre o cartucho, tais como:
+	Tamanho do código, tokens e tamanho compactado.
 	
 flip
-	Grava o que está em buffer na tela e aguarda o próximo frame (30fps)
-	Não precisa fazer isso normalmente -- _draw() fará isto por você.
+	Grava o que está em buffer na tela e aguarda o próximo frame (30FPS).
+	Não precisa fazer isso normalmente; _draw() fará isto por você.
 
 printh str
 	Imprime a string para o terminal do sistema operacional, para analizar código.
@@ -734,35 +733,34 @@ printh str
 	Estrutura de um programa
 --------------------------------------------------------------------------------------------
 
-	Existem 3 funções especiais que, se definidas, serão executadas durante a execução do
+	Existem 3 funções especiais que, se definidas, serão chamadas durante a execução do
 	programa:
 	
 		_update()
-			invocada a cada atualização a 30fps
+			Chamada a cada atualização a 30FPS;
 	
 		_draw()
-			invocada uma vez pra cada frame visível
+			Chamada uma vez para cada frame visível;
 		
 		_init()
-			invocada uma vez quando o programa começa
+			Chamada uma vez quando o programa começa.
 
 
-	_draw() normalmente é invocada a 30fps, mas se não puder ser realizada a tempo, PICO-8
-	irá tentar executá-la a 15ps e invocar _update() duas vezes por frame para compensar.
+	_draw() normalmente é chamada a 30FPS, mas se não puder ser realizada a tempo, PICO-8
+	irá tentar executá-la a 15FPS e chamar _update() duas vezes por frame para compensar.
 	
 	
-	
-	:: Executando PICO-8 a 60fps
+	:: Executando PICO-8 a 60FPS
 
-		Se _update60() for definido no lugar de _update(), PICO-8 irá executar em modo 60fps:
+		Se _update60() for definido no lugar de _update(), PICO-8 irá executar em modo 60FPS:
 	
-			- ambos _update60() e _draw() serão invocados a 60fps
-			- metade do CPU do PICO-8 está disponível por frame antes de cair para 30fps
+			- Ambos _update60() e _draw() serão invocados a 60FPS;
+			- Metade do CPU do PICO-8 está disponível por frame antes de cair para 30FPS.
 
-		** Atenção ao fato que nem todas as versões do PICO-8 suportam 60fps. Em máquinas que
-		não suportam este modo, _update60() será invocada duas vezes por frame e _draw() a 30fps.
-		Você pode verificar o comportamento do seu programa rodando a 30fps adicionando o seguinte
-		trecho ao final do código :
+		** Atenção ao fato que nem todas as versões do PICO-8 suportam 60FPS. Em máquinas que
+		não suportam este modo, _update60() será invocada duas vezes por frame e _draw() a 30FPS.
+		Você pode verificar o comportamento do seu programa rodando a 30FPS adicionando o seguinte
+		trecho ao final do código:
 	
 		u60=_update60 _update60=nil function _update() u60() u60() end
 
