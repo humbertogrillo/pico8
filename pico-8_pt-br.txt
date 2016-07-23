@@ -15,24 +15,24 @@
 	
 ===========================================================================================
 
-Bem vindo(a) ao PICO-8!
+Bem-vindo(a) ao PICO-8!
 
-	PICO-8 é um console fantasia para fazer, distribuir e jogar pequenos jogos e programas
+	PICO-8 é um console fantasia para criar, distribuir e jogar pequenos jogos e programas
 	de computador. Quando ligado, a máquina abre um shell (terminal ou console)
 	para digitar código em Lua diretamente, e fornece ferramentas simples para criar sprites
 	(imagens), maps e áudio.
 	
-	As severas limitações do PICO-8 foram cuidadosamente escolhidas para serem divertidas,
-	encorajarem designs minimalistas porém expressivos, e fornecer aos cartuchos do PICO-8
+	As várias limitações do PICO-8 foram cuidadosamente escolhidas para serem divertidas,
+	encorajarem designs minimalistas porém expressivos, e fornecerem aos cartuchos do PICO-8
 	uma aparência e personalidade única.
 	
 	
 :: Teclas
 
-	Alterna entre Tela-cheia e janela: Alt + Enter
-	Sair: Alt + F4 ou command - Q
-	Executar, reiniciar e recarregar cartucho: Ctrl + R
-	Salvar: Ctrl + S
+	Alternar entre tela-cheia e janela: ALT-ENTER
+	Sair: ALT-F4 ou COMMAND-Q
+	Executar, reiniciar e recarregar cartucho: CTRL-R
+	Salvar: CTRL-S
 	Pausar (enquanto executando): P
 	Jogador 1 (padrão): Setas + Z, X / N, M / C, V
 	Jogador 2 (padrão): S, D, F, E + Tab, Q / Shift, A
@@ -45,14 +45,14 @@ Bem vindo(a) ao PICO-8!
 	Entrada: 6 botões
 	Tamanho do cartucho: 32k
 	Áudio: 4 canais, 64 ruídos definíveis
-	Código: Lua (Máximo 8192 Elementos (tokens))
-	Sprites: Banco com 128 sprites de 8x8 (+ 128 compartilhados)
-	Mapa: 128x32 células de 8-bit (+ 128x32 compartilhados)
+	Código: Lua (máximo de 8192 elementos (tokens))
+	Sprites: Banco com 128 sprites de 8x8 (+128 compartilhados)
+	Mapa: 128x32 células de 8-bit (+128x32 compartilhados)
 	
 	
 :: Olá Mundo (Hello World)
 
-	Após PICO-8 ser carregado, tente executar os seguintes comandos e pressione Enter:
+	Após PICO-8 ser carregado, tente executar os seguintes comandos e pressione ENTER:
 		
 		PRINT ("HELLO WORLD")
 		RECTFILL(80,80,120,10,12)
@@ -79,7 +79,7 @@ Bem vindo(a) ao PICO-8!
 	 CIRCFILL(X,Y,7,8)
 	END
 	
-	Agora use Esc para retornar ao console e digite RUN para ver o código em ação.
+	Agora use ESC para retornar ao console e digite RUN para ver o código em ação.
 	Para programas mais complexos veja os demais exemplos de cartuchos.
 	
 
@@ -89,16 +89,16 @@ Bem vindo(a) ao PICO-8!
 	INSTALL_DEMOS
 	CD DEMOS
 	
-	API		Demonstra a maioria das funcionaldades do PICO-8
-	JELPI		Jogo demo de plataforma com suporte a dois jogadores
-	CAST		Demo de 2,5D
-	MANDEL		Explorador de conjunto de Mandelbrot
-	COLLIDE		Exemplo de detecção de colisão com paredes e atores
-	BUTTERFLY	Triângulo de Sierpinski
-	DRIPPY		Desenha uma linha que escorre
-	STOMPY		Cartucho de música
-	WOO		Cartucho de música
-	
+	API		Demonstra a maioria das funcionaldades do PICO-8;
+	JELPI		Jogo demo de plataforma com suporte a dois jogadores;
+	CAST		Demo de 2,5D;
+	MANDEL		Explorador de conjunto de Mandelbrot;
+	COLLIDE		Exemplo de detecção de colisão com paredes e atores;
+	BUTTERFLY	Triângulo de Sierpinski;
+	DRIPPY		Desenha uma linha que escorre;
+	STOMPY		Cartucho de música;
+	WOO		Cartucho de música.
+	.=
 	Para rodar um cartucho, abra o PICO-8 e digite:
 	
 	LOAD JELPI
@@ -109,18 +109,18 @@ Bem vindo(a) ao PICO-8!
 	
 :: Sistema de arquivos
 
-	Estes comandos podem ser usados para gerenciar os arquivos nos diretórios (pastas)
+	Estes comandos podem ser usados para gerenciar os arquivos nos diretórios (pastas):
 	
-	DIR		lista o diretório atual
-	LS		mesmo que DIR
-	CD BLA		vai para o diretório "BLA"
-	CD ..		volta para o diretório anterior
-	CD /		volta para o diretório inicial do PICO-8
-	MKDIR		cria um diretório
-	FOLDER		abre o diretório atual com o sistema operacional
+	DIR		Lista o diretório atual;
+	LS		Mesmo que DIR;
+	CD BLA		Vai para o diretório "BLA";
+	CD ..		Volta para o diretório anterior;
+	CD /		Volta para o diretório inicial do PICO-8;
+	MKDIR		Cria um diretório;
+	FOLDER		Abre o diretório atual com o sistema operacional.
 	
-	LOAD BLA	carrega o cartucho "BLA"
-	SAVE BLA	salva o cartucho "BLA"
+	LOAD BLA	Carrega o cartucho "BLA";
+	SAVE BLA	Salva o cartucho "BLA".
 	
 	Para mover, deletar, duplicar e renomear arquivos, é melhor usar o comando FOLDER
 	e então fazer as operações desejadas.
@@ -164,18 +164,18 @@ Bem vindo(a) ao PICO-8!
 	
 		pico-8 [comando] [arquivo.p8]
 	
-		-run                Carrega arquivo.p8 ao iniciar o Pico-8.
-		-width n            Define a largura da janela e ajusta a proporção se esta não for especificada.
-		-height n           Define a altura da janela e ajusta a proporção se esta não for especificada.
-		-scale n            Define o tamanho de cada pixel no PICO-8. "-scale 3" define os pixels como 3x3.
-		-windowed n         Define se PICO-8 será exibido em tela cheia (0) ou em uma janela (1).
-		-sound n            Define o volume entre 0 e 256.
-		-music n            Define o volume da música entre 0 e 256.
-		-joystick n         Define o controle para o jogador n (0..7).
-		-aspect n           Define o aspecto do pixel. 420 para 1:1 (padrão), 560 para 4:3, 525 para 5:4. 
-		-run filename       Carrega e executa um cartucho.
-		-splore             Carrega em modo "splore".
-		-home path          Define o caminho para o arquivo config.txt e outros arquivos de configuração.
+		-run                Carrega arquivo.p8 ao iniciar o Pico-8;
+		-width n            Define a largura da janela e ajusta a proporção se esta não for especificada;
+		-height n           Define a altura da janela e ajusta a proporção se esta não for especificada;
+		-scale n            Define o tamanho de cada pixel no PICO-8. "-scale 3" define os pixels como 3x3;
+		-windowed n         Define se PICO-8 será exibido em tela cheia (0) ou em uma janela (1);
+		-sound n            Define o volume entre 0 e 256;
+		-music n            Define o volume da música entre 0 e 256;
+		-joystick n         Define o controle para o jogador n (0..7);
+		-aspect n           Define o aspecto do pixel. 420 para 1:1 (padrão), 560 para 4:3, 525 para 5:4;
+		-run filename       Carrega e executa um cartucho;
+		-splore             Carrega em modo "splore";
+		-home path          Define o caminho para o arquivo config.txt e outros arquivos de configuração;
 		-gif_len n          Define tamanho máximo para criar gifs em segundos (1..120).
 		
 		
@@ -195,13 +195,12 @@ Bem vindo(a) ao PICO-8!
 
 	Existem 3 formas de compartilhar um cartucho:
 	
-		1. Distribua o arquivo .p8 ou .p8.png diretamente com outros usuários do PICO-8.
+		1. Distribua o arquivo .p8 ou .p8.png diretamente com outros usuários do PICO-8;
 	
-		2. Publique o cartucho no BBS Lexaloffle para obter uma versão jogável na web.
+		2. Publique o cartucho no BBS Lexaloffle para obter uma versão jogável na web:
 
 			http://www.lexaloffle.com/pico-8.php?page=submit
-
-		Veja save() para dicas de como gerar uma versão .p8.png. (procure por .png).
+			Veja save() para dicas de como gerar uma versão .p8.png. (procure por .png).
 
 		3. Exporte o cartucho no formato HTML5:
 		
@@ -234,7 +233,7 @@ Bem vindo(a) ao PICO-8!
 	
 	A etiqueta do cartucho é salva como p8.png quando se usa o comando save().
 	
-	Você pode salvar um vídeo a qualquer momento (PICO-8 está sempre gravando) -- use F8 para reiniciar
+	Você pode salvar um vídeo a qualquer momento (PICO-8 está sempre gravando); use F8 para reiniciar
 	a gravação a partir de um ponto específico.
 
 	Para mudar a duração máxima do gif, altere gif_len no arquivo config.txt para definir o número de 
@@ -246,15 +245,15 @@ Bem vindo(a) ao PICO-8!
 
 	1. Para importar ou exportar uma spritesheet (imagens de jogo) como .png:
 	
-		import("blah.png")    --  Pede um png de 128x128 com cores compatíveis com a palheta do PICO-8;
-		export("blah.png")    --  Salva o arquivo blah.png. Use folder() para localizar o arquivo exportado.
+		import("blah.png")    --  Pede um png de 128x128 com cores compatíveis com a palheta do PICO-8
+		export("blah.png")    --  Salva o arquivo blah.png. Use folder() para localizar o arquivo exportado
 	
 	2. Para exportar efeitos sonoros e música:
 	
-		export("blah.wav")    --  Exporta música da trilha atual quando o editor estiver em modo MÚSICA;
-		export("blah.wav")    --  Exporta o efeito sonoro atual quando o editor estiver em modo SFX;
+		export("blah.wav")    --  Exporta música da trilha atual quando o editor estiver em modo MÚSICA
+		export("blah.wav")    --  Exporta o efeito sonoro atual quando o editor estiver em modo SFX
 		export("blah%d.wav")  --  Exporta todos os efeitos sonoros seguindo o padrão: blah0.wav, 
-					  blah1.wav .. blah63.wav.
+					  blah1.wav .. blah63.wav
 
 		// Na linha de comando você pode ignorar os parênteses e as aspas, digitando: EXPORT BLAH.WAV 
 
@@ -263,7 +262,7 @@ Bem vindo(a) ao PICO-8!
 
 	Peculiaridades comuns a serem observadas:
 	- A metade inferior do spritesheet e a metade inferior do mapa ocupam o mesmo espaço em memória;
-		// Melhor usar um ou outro se não souber como isto funciona.
+		// Melhor usar um ou outro se não souber como isto funciona
 	- Números em PICO-8 têm o limite de 32767,99;
 		// Se você adicionar 1 a um contador a cada frame, ele vai estourar em 18 minutos!
 	- Arrays em Lua começam em 1, e não 0. Assim, por exemplo, o comando FOREACH começa em T[1];
@@ -301,7 +300,7 @@ Bem vindo(a) ao PICO-8!
 	
 	Pressione ESC para alternar entre o terminal e o editor.
 	Clique nas abas no topo do editor para alternar entre os modos. Também é possível 
-	usar ALT+ESQUERDA/DIREITA.
+	usar ALT-ESQUERDA/DIREITA.
 
 
 	** ALERTA: A segunda metade do spritesheet (bancos 2 e 3) e a metade de baixo do mapa
@@ -374,7 +373,7 @@ Bem vindo(a) ao PICO-8!
 		
 	Flags de sprite
 		Os 8 círculos coloridos são flags para o sprite atual. Cada um pode
-		estar ligado (TRUE) ou desligado (FALSE), e são acessados pelas funções
+		estar ligado (VERDADEIRO) ou desligado (FALSO), e são acessados pelas funções
 		FSET e FGET. Elas são indexadas a partir de 0 (0, 1, 2..7).
 		Veja fset() para mais informações.
 	
@@ -388,7 +387,7 @@ Bem vindo(a) ao PICO-8!
 	As ferramentas são semelhantes ao editor de sprites. Selecione um sprite e clique e arraste
 	para pintar o mapa.
 
-	- Para desenhar vários sprites, selecione-os com SHIFT+MOUSE;
+	- Para desenhar vários sprites, selecione-os com SHIFT-MOUSE;
 	- Para copiar um bloco, use a ferramenta de seleção e então o carimbo;
 	- Para passear pelo mapa, use a ferramenta de panorama ou segure ESPAÇO;
 	- Q, W para alternar entre o sprite anterior e o seguinte.
@@ -423,7 +422,7 @@ Bem vindo(a) ao PICO-8!
 		usando o instrumento atual (indicado pela cor).
 		
 		Segure SHIFT para aplicar apenas o instrumento selecionado;
-		Segure CTRL para deslocar as notas na escala de C menor.	
+		Segure CTRL para deslocar as notas na escala de C-menor.	
 	
 	2. Modo de trilha
 	
@@ -432,8 +431,8 @@ Bem vindo(a) ao PICO-8!
 		Novas notas seguirão o instrumento e efeito selecionados;
 		Para apagar uma nota use BACKSPACE ou marque o volume como 0.
 	
-		Clique e depois SHIFT+Clique para definir uma área a ser copiada
-		(CTRL+C) e colada (CTRL+V).
+		Clique e depois SHIFT-CLIQUE para definir uma área a ser copiada
+		(CTRL-C) e colada (CTRL-V).
 		
 		
 	3. Controles para ambos os modos
@@ -442,10 +441,10 @@ Bem vindo(a) ao PICO-8!
 	    	< > para alterar velocidade;
 		ESPAÇO para reproduzir ou parar;
 		A para criar uma repetição de exemplo;
-		Clique com o botão direito ou esquerdo para reduzir ou aumentar a velocidade ou índice da repetição;
+		CLIQUE com o botão DIREITO ou ESQUERDO para reduzir ou aumentar a velocidade ou índice da repetição, respectivamente;
 		 // Segure SHIFT para aumentar ou reduzir de 4 em 4
 		 // É possível também clicar e arrastar para direita e esquerda, ou para cima e para baixo
-		SHIFT+Clique em um instrumento, efeito ou volume para definí-lo para todas as notas.
+		SHIFT-CLIQUE em um instrumento, efeito ou volume para definí-lo para todas as notas.
 	
 	
 	:: Efeitos
@@ -487,8 +486,8 @@ Bem vindo(a) ao PICO-8!
 	:: Copiando músicas entre cartuchos ou dentro de um cartucho
 	
 		Para selecionar um grupo de modelos: clique uma vez no primeiro modelo no navegador,
-		então use SHIFT+Clique no último modelo. Modelos selecionados podem ser copiados
-		e colados com CTRL+C e CTRL+V. Quando colar em outro cartucho, o SFX de cada modelo
+		então use SHIFT-CLIQUE no último modelo. Modelos selecionados podem ser copiados
+		e colados com CTRL-C e CTRL-V. Quando colar em outro cartucho, o SFX de cada modelo
 		também será copiado (possívelmente com índice diferente) se este já não existir.
 
 	
@@ -587,7 +586,7 @@ Para mais detalhes, ou para saber mais sobre o Lua oficial, visite www.lua.org.
 :: Tabelas
 	
 	Em Lua, tabelas são coleções de pares de informação chave-valor, onde chaves e valores podem
-	ser de tipos misturados. Elas podem ser usadas como arrays se indexá-las com numéros inteiros (1,2,3,...).
+	ser de tipos misturados. Elas podem ser usadas como arrays se indexá-las com numéros inteiros (1, 2, 3, ...).
 
 	A={} -- cria uma tabela vazia
 	A[1] = "BLAH"
@@ -703,18 +702,18 @@ ls
 	lista todos os arquivos na pasta atual.
 
 run
-	Executa um programa do seu início.
+	Executa um programa do seu início;
 	Pode ser chamado dentro do programa para resetar o cartucho.
 
 resume
 	Executa a partir do último estado do cartucho (flakey).
 
 reboot
-	Reinicia a máquina.
+	Reinicia a máquina;
 	Útil para começar um novo projeto.
 
 stat x
-	x = 0; retorna o uso de memória do Lua (0..1024MB).
+	x = 0; retorna o uso de memória do Lua (0..1024MB);
 	x = 1; retorna o uso de CPU no último frame (1.0 significa 100% a 30FPS).
 
 info
@@ -722,7 +721,7 @@ info
 	Tamanho do código, tokens e tamanho compactado.
 	
 flip
-	Grava o que está em buffer na tela e aguarda o próximo frame (30FPS).
+	Grava o que está em buffer na tela e aguarda o próximo frame (30FPS);
 	Não precisa fazer isso normalmente; _draw() fará isto por você.
 
 printh str
@@ -779,7 +778,7 @@ printh str
 	por qualquer função, mas sempre persistindo.
 
 	o draw-state é reiniciado toda vez que o programa é executado. É o equivalente a chamar:
-	clip() camera() pal() color()
+	clip(), camera(), pal() ou color().
 
 	Índice de cores:
 	
@@ -804,8 +803,8 @@ sset x y [c]
 fget n [f]
 fset n [f] v
 	Recupera ou define o valor (v) da flag de um sprite;
-	f é o índice da flag de 0..7;
-	v é um boleano, podendo ser TRUE ou FALSE.
+	f: índice da flag de 0..7;
+	v: boleano, podendo ser TRUE ou FALSE.
 	
 	O valor inicial das flags é definível pelo editor de sprites,
 	utilizando a linha de botões circulares coloridos.
