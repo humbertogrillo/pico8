@@ -6,12 +6,12 @@
  http://www.pico-8.com
  (c) Copyright 2014-2016 Lexaloffle Games LLP
  Autor: Joseph White // hey@lexaloffle.com
- Tradutor pt-br: Humberto Celia-Silva // humberto.celiasilva@gmail.com // @betoraposa
+ Tradução: Humberto Celia-Silva // humberto.celiasilva@gmail.com // @betoraposa
  
  PICO-8 é construído com:
- 	SDL2 http://www.libsdl.org
- 	Lua 5.2 http://www.lua.org  // ver license.txt
- 	GIFLIB http://giflib.sourceforge.net/
+ 	SDL2: http://www.libsdl.org
+ 	Lua 5.2: http://www.lua.org  // ver license.txt
+ 	GIFLIB: http://giflib.sourceforge.net/
 	
 ===========================================================================================
 
@@ -98,13 +98,13 @@ Bem-vindo(a) ao PICO-8!
 	DRIPPY		Desenha uma linha que escorre;
 	STOMPY		Cartucho de música;
 	WOO		Cartucho de música.
-	.=
+	
 	Para rodar um cartucho, abra o PICO-8 e digite:
 	
 	LOAD JELPI
 	RUN
 	
-	Pressione Esc para parar o programa, e pressione novamente para entrar no editor.
+	Pressione ESC para parar o programa, e pressione novamente para entrar no modo edição.
 	
 	
 :: Sistema de arquivos
@@ -148,19 +148,19 @@ Bem-vindo(a) ao PICO-8!
 
 	:: config.txt
 	
-		Você pode encontrar algumas configurações no arquivo config.txt. Edite o arquivo
+		Você pode encontrar algumas configurações no arquivo "config.txt". Edite o arquivo
 		apenas quando o PICO-8 não estiver rodando.
 		
 		Windows:	C:/Users/Yourname/AppData/Roaming/pico-8/config.txt
 		OSX: 		/Users/Yourname/Library/Application Support/pico-8/config.txt
 		Linux: 		~/.lexaloffle/pico-8/config.txt
 		
-		Use o comando -home (ver abaixo) para trocar o local padrão do arquivo config.txt.
+		Use o comando -home (ver abaixo) para trocar o local padrão do arquivo "config.txt".
 		
 		
 	:: Linha de comando
 	
-		// Nota: Estes comandos sobrescrevem o que está no config.txt.
+		// Nota: Estes comandos sobrescrevem o que está presente no "config.txt".
 	
 		pico-8 [comando] [arquivo.p8]
 	
@@ -175,15 +175,15 @@ Bem-vindo(a) ao PICO-8!
 		-aspect n           Define o aspecto do pixel. 420 para 1:1 (padrão), 560 para 4:3, 525 para 5:4;
 		-run filename       Carrega e executa um cartucho;
 		-splore             Carrega em modo "splore";
-		-home path          Define o caminho para o arquivo config.txt e outros arquivos de configuração;
+		-home path          Define o caminho para o arquivo "config.txt" e outros arquivos de configuração;
 		-gif_len n          Define tamanho máximo para criar gifs em segundos (1..120).
 		
 		
 	:: Configuração de controle
 	
 		PICO-8 usa o esquema de controle conhecido como SDL2. Ele detecta controles comuns ao iniciar e
-		busca um mapeamento customizado para os botões em sdl_controllers.txt, no mesmo diretório onde está 
-		o config.txt. sdl_controllers.txt possui um mapeamento por linha.
+		busca um mapeamento customizado para os botões em "sdl_controllers.txt", no mesmo diretório onde está 
+		o "config.txt". O arquivo "sdl_controllers.txt" possui um mapeamento por linha.
 	
 		Para gerar um mapeamento para seu controle, use o programa controllermap que vem com o SDL2, ou
 		experimente a ferramenta do site http://www.generalarcade.com/gamepadtool/
@@ -195,12 +195,12 @@ Bem-vindo(a) ao PICO-8!
 
 	Existem 3 formas de compartilhar um cartucho:
 	
-		1. Distribua o arquivo .p8 ou .p8.png diretamente com outros usuários do PICO-8;
+		1. Distribua o arquivo ".p8" ou ".p8.png" diretamente com outros usuários do PICO-8;
 	
 		2. Publique o cartucho no BBS Lexaloffle para obter uma versão jogável na web:
 
 			http://www.lexaloffle.com/pico-8.php?page=submit
-			Veja save() para dicas de como gerar uma versão .p8.png. (procure por .png).
+			Veja save() para dicas de como gerar uma versão ".p8.png." (procure por ".png").
 
 		3. Exporte o cartucho no formato HTML5:
 		
@@ -231,19 +231,19 @@ Bem-vindo(a) ao PICO-8!
 		
 		// Se F6..F9 não estiverem disponíveis no seu sistema, use F1..F4
 	
-	A etiqueta do cartucho é salva como p8.png quando se usa o comando save().
+	A etiqueta do cartucho é salva como ".p8.png" quando se usa o comando save().
 	
 	Você pode salvar um vídeo a qualquer momento (PICO-8 está sempre gravando); use F8 para reiniciar
 	a gravação a partir de um ponto específico.
 
-	Para mudar a duração máxima do gif, altere gif_len no arquivo config.txt para definir o número de 
-	segundos a serem gravados. O formato gif pode não resultar em 30FPS (quadros por segundo) então
+	Para mudar a duração máxima do gif, altere gif_len no arquivo "config.txt" para definir o número de 
+	segundos a serem gravados. O formato ".gif" pode não resultar em 30FPS (quadros por segundo) então
 	PICO-8 usa uma aproximação: 33,3FPS.
 	
 
 :: Exportadores e importadores
 
-	1. Para importar ou exportar uma spritesheet (imagens de jogo) como .png:
+	1. Para importar ou exportar uma spritesheet (imagens de jogo) como ".png":
 	
 		import("blah.png")    --  Pede um png de 128x128 com cores compatíveis com a palheta do PICO-8
 		export("blah.png")    --  Salva o arquivo blah.png. Use folder() para localizar o arquivo exportado
@@ -269,7 +269,7 @@ Bem-vindo(a) ao PICO-8!
 	- cos() e sin() esperam valores entre 0 e 1 ao invés de 0 e PI * 2. E sin() está invertido;
 	- sgn(0) retorna 1;
 	- Mudando para tela cheia: use alt-enter no OSX (command-F é usado para buscar texto);
-	- Quando quiser exportar um cartucho .png, use SAVE e não EXPORT, pois este salvará apenas o spritesheet!
+	- Quando quiser exportar um cartucho ".png", use SAVE e não EXPORT, pois este salvará apenas o spritesheet!
 
 
 :: Splore
@@ -661,12 +661,12 @@ load nome_arquivo
 save nome_arquivo
 	Carrega ou salva um cartucho.
 	
-	Use ".png" para salvar um cartucho no formato png, caso contrário, o formato de texto (".p8") será utilizado.
+	Use ".png" para salvar um cartucho no formato ".png", caso contrário, o formato de texto (".p8") será utilizado.
 	
 	O ".p8" pode ser omitido em ambos os casos, e será automaticamente adicionado:
 		save("blah") --> save("blah.p8")
 		save("blah.png") --> save("blah.p8.png")
-		load("blah.png") --> load("blah.p8.png") (se blah.png não existir!)
+		load("blah.png") --> load("blah.p8.png") (se "blah.png" não existir!)
 	
 	O mesmo vale para carregar. Se um arquivo não é encontrado, PICO-8 tentará novamente com ".p8".
 	
@@ -676,7 +676,7 @@ save nome_arquivo
 	Assim que um cartucho for carregado ou salvo, ele também pode ser salvo usando CTRL+S.
 
 
-	:: Salvando cartuchos .png com um título e uma imagem
+	:: Salvando cartuchos ".png" com um título e uma imagem
 	
 	Para gerar uma imagem a ser salva com o cartucho, execute o programa e pressione F7 para 
 	capturar a imagem que estiver na tela. As primeiras duas linhas do programa começando com
@@ -687,11 +687,11 @@ save nome_arquivo
 	-- POR LOOPY
 	
 	
-	:: Restrições no tamanho do código para o formato .png
+	:: Restrições no tamanho do código para o formato ".png"
 	
-	Quando salvando no formato .png, o tamanho compactado do arquivo deve ser menor que 15.360 bytes. Para
+	Quando salvando no formato ".png", o tamanho compactado do arquivo deve ser menor que 15.360 bytes. Para
 	verificar o tamanho do código, use o comando INFO. O tamanho compactado não é forçado quando usando o
-	formato .p8. Na maioria dos casos, não é necessário se preocupar com o tamanho compactado já que o
+	formato ".p8". Na maioria dos casos, não é necessário se preocupar com o tamanho compactado já que o
 	limite de tokens (8192) é atingido antes.
 
 
@@ -722,7 +722,7 @@ info
 	
 flip
 	Grava o que está em buffer na tela e aguarda o próximo frame (30FPS);
-	Não precisa fazer isso normalmente; _draw() fará isto por você.
+	Não é necessário fazer isso em geral; _draw() fará isto por você.
 
 printh str
 	Imprime a string para o terminal do sistema operacional, para analizar código.
@@ -754,10 +754,10 @@ printh str
 		Se _update60() for definido no lugar de _update(), PICO-8 irá executar em modo 60FPS:
 	
 			- Ambos _update60() e _draw() serão invocados a 60FPS;
-			- Metade do CPU do PICO-8 está disponível por frame antes de cair para 30FPS.
+			- Metade do CPU do PICO-8 está disponível por quadro antes de cair para 30FPS.
 
 		** Atenção ao fato que nem todas as versões do PICO-8 suportam 60FPS. Em máquinas que
-		não suportam este modo, _update60() será invocada duas vezes por frame e _draw() a 30FPS.
+		não suportam este modo, _update60() será chamada duas vezes por quadro e _draw() a 30FPS.
 		Você pode verificar o comportamento do seu programa rodando a 30FPS adicionando o seguinte
 		trecho ao final do código:
 	
