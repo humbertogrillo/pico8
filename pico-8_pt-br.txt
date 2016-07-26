@@ -6,36 +6,36 @@
  http://www.pico-8.com
  (c) Copyright 2014-2016 Lexaloffle Games LLP
  Autor: Joseph White // hey@lexaloffle.com
- Tradutor pt-br: Humberto Celia-Silva // humberto.celiasilva@gmail.com // @betoraposa
+ Tradução: Humberto Celia-Silva // humberto.celiasilva@gmail.com // @betoraposa
  
  PICO-8 é construído com:
- 	SDL2 http://www.libsdl.org
- 	Lua 5.2 http://www.lua.org  // ver license.txt
- 	GIFLIB http://giflib.sourceforge.net/
+ 	SDL2: http://www.libsdl.org
+ 	Lua 5.2: http://www.lua.org  // ver license.txt
+ 	GIFLIB: http://giflib.sourceforge.net/
 	
 ===========================================================================================
 
-Bem vindo(a) ao PICO-8!
+Bem-vindo(a) ao PICO-8!
 
-	PICO-8 é um console fantasia para fazer, distribuir e jogar pequenos jogos e programas
-	de computador. Quando ligado, a maquina te apresenta um shell (terminal ou console)
+	PICO-8 é um console fantasia para criar, distribuir e jogar pequenos jogos e programas
+	de computador. Quando ligado, a máquina abre um shell (terminal ou console)
 	para digitar código em Lua diretamente, e fornece ferramentas simples para criar sprites
 	(imagens), maps e áudio.
 	
-	As severas limitações do PICO-8 foram cuidadosamente escolhidas para serem divertidas,
-	encorajar designs pequenos porém expressivos e fornecer aos cartuchos do PICO-8 uma
-	aparência e personalidade particular.
+	As várias limitações do PICO-8 foram cuidadosamente escolhidas para serem divertidas,
+	encorajarem designs minimalistas porém expressivos, e fornecerem aos cartuchos do PICO-8
+	uma aparência e personalidade única.
 	
 	
 :: Teclas
 
-	Alterna entre Tela-cheia e janela: Alt + Enter
-	Sair: Alt + F4 ou command - Q
-	Executar, reiniciar e recarregar cartucho: Ctrl + R
-	Salvar: Ctrl + S
+	Alternar entre tela-cheia e janela: ALT-ENTER
+	Sair: ALT-F4 ou COMMAND-Q
+	Executar, reiniciar e recarregar cartucho: CTRL-R
+	Salvar: CTRL-S
 	Pausar (enquanto executando): P
-	Jogador 1 (padrão): Setas + Z,X / N,M / C,V
-	Jogador 2 (padrão): S,D,F,E + Tab,Q / Shift,A
+	Jogador 1 (padrão): Setas + Z, X / N, M / C, V
+	Jogador 2 (padrão): S, D, F, E + Tab, Q / Shift, A
 	// Altere o padrão usando KEYCONFIG
 	
 	
@@ -43,28 +43,28 @@ Bem vindo(a) ao PICO-8!
 
 	Tela: 128x128, palheta de 16 cores fixas
 	Entrada: 6 botões
-	Tamanho do Cartucho: 32k
+	Tamanho do cartucho: 32k
 	Áudio: 4 canais, 64 ruídos definíveis
-	Código: Lua (Máximo 8192 Elementos (tokens))
-	Sprites: Banco com 128 sprites de 8x8 (+ 128 compartilhados)
-	Mapa: 128x32 celulas de 8-bit (+ 128x32 compartilhados)
+	Código: Lua (máximo de 8192 elementos (tokens))
+	Sprites: Banco com 128 sprites de 8x8 (+128 compartilhados)
+	Mapa: 128x32 células de 8-bit (+128x32 compartilhados)
 	
 	
 :: Olá Mundo (Hello World)
 
-	Após PICO-8 ser carregado, tente executar os seguintes comandos e pressione Enter:
+	Após PICO-8 ser carregado, tente executar os seguintes comandos e pressione ENTER:
 		
 		PRINT ("HELLO WORLD")
 		RECTFILL(80,80,120,10,12)
 		CIRCFILL(70,90,20,14)
 		FOR I = 1,4 DO PRINT(I) END
 		
-	(Nota: PICO-8 apenas exibe letras em maiúscula.)
+	(Nota: PICO-8 apenas exibe letras em caixa alta.)
 
 	Você pode fazer um preve programa interativo usando comandos como os acima no modo de
 	edição de código junto com as duas funções especiais _UPDATE e _DRAW. Por exemplo, o
 	programa abaixo permite você movimentar um circulo usando as setas do teclado. Pressi-
-	one Esc para entrar no editor de código e digite ou copie e cole o código abaixo:
+	one Esc para entrar no editor de código e digite, ou copie e cole, o código abaixo:
 	
 	X = 64 Y = 64
 	FUNCTION _UPDATE()
@@ -79,59 +79,59 @@ Bem vindo(a) ao PICO-8!
 	 CIRCFILL(X,Y,7,8)
 	END
 	
-	Agora use Esc para retornar ao console e digite RUN para ver o código em ação.
+	Agora use ESC para retornar ao console e digite RUN para ver o código em ação.
 	Para programas mais complexos veja os demais exemplos de cartuchos.
 	
 
-:: Cartuchos de Exemplos
+:: Cartuchos de exemplo
 
 	Esses cartuchos são parte do PICO-8 e podem ser instalados digitando:
 	INSTALL_DEMOS
 	CD DEMOS
 	
-	API		Demonstra a maioria das funcionaldades do PI
-	JELPI		Jogo demo de plataforma com suporte a dois jogadores
-	CAST		Demo de 2.5D
-	MANDEL		explorador de conjunto de Mandelbrot
-	COLLIDE		Exemplo de detecção de colisão com paredes e atores
-	BUTTERFLY	Coisa triangular sepertinante
-	DRIPPY		Desenha uma linha que escorre
-	STOMPY		Cartucho de música
-	WOO		Cartucho de música
+	API		Demonstra a maioria das funcionaldades do PICO-8;
+	JELPI		Jogo demo de plataforma com suporte a dois jogadores;
+	CAST		Demo de 2,5D;
+	MANDEL		Explorador de conjunto de Mandelbrot;
+	COLLIDE		Exemplo de detecção de colisão com paredes e atores;
+	BUTTERFLY	Triângulo de Sierpinski;
+	DRIPPY		Desenha uma linha que escorre;
+	STOMPY		Cartucho de música;
+	WOO		Cartucho de música.
 	
-	Para rodar um cartucho, abra o PICO-8 e digite
+	Para rodar um cartucho, abra o PICO-8 e digite:
 	
 	LOAD JELPI
 	RUN
 	
-	Pressione Esc para parar o programa, e pressione novamente para entrar no editor.
+	Pressione ESC para parar o programa, e pressione novamente para entrar no modo edição.
 	
 	
 :: Sistema de arquivos
 
-	Estes comandos podem ser usados para gerenciar os arquivos nos diretórios (pastas)
+	Estes comandos podem ser usados para gerenciar os arquivos nos diretórios (pastas):
 	
-	DIR		lista o diretório atual
-	LS		mesmo que DIR
-	CD BLA		vai para o diretório BLA
-	CD ..		volta para o diretório anterior
-	CD /		volta para o diretório inicial do PICO-8
-	MKDIR		cria um diretório
-	FOLDER		abre o diretório atual com o sistema operacional
+	DIR		Lista o diretório atual;
+	LS		Mesmo que DIR;
+	CD BLA		Vai para o diretório "BLA";
+	CD ..		Volta para o diretório anterior;
+	CD /		Volta para o diretório inicial do PICO-8;
+	MKDIR		Cria um diretório;
+	FOLDER		Abre o diretório atual com o sistema operacional.
 	
-	LOAD BLA	carrega o cartucho BLA
-	SAVE BLA	salva o cartucho BLA
+	LOAD BLA	Carrega o cartucho "BLA";
+	SAVE BLA	Salva o cartucho "BLA".
 	
-	Para mover arquivos, deletar, duplicar e renomear, é melhor usar o comando FOLDER
+	Para mover, deletar, duplicar e renomear arquivos, é melhor usar o comando FOLDER
 	e então fazer as operações desejadas.
 	
-	O local padrão do drive do PICO-8 são como a seguir:
+	O local padrão do drive do PICO-8 são os seguintes:
 
 	Windows:	C:/Users/Yourname/AppData/Roaming/pico-8/carts
 	OSX: 		/Users/Yourname/Library/Application Support/pico-8/carts
 	Linux: 		~/.lexaloffle/pico-8/carts
 	
-	Você pode trocar isto e outras configurações no arquivo pico-8/config.txt
+	Você pode trocar esta e outras configurações no arquivo pico-8/config.txt.
 	
 	Dica: Se você é um usuário do Dropbox, é possível definir o drive do PICO-8 como sendo
 	uma das pastas compartilhadas do dropbox para poder compartilhar o drive entre várias
@@ -140,7 +140,7 @@ Bem vindo(a) ao PICO-8!
 	
 :: Backups
 
-	Se você sair sem salvar as mudanças, ou sobreescrever um arquivo existente, um backup
+	Se você sair sem salvar as mudanças, ou sobrescrever um arquivo existente, um backup
 	do arquivo é salvo em pico-8/backup.
 	
 	
@@ -148,42 +148,42 @@ Bem vindo(a) ao PICO-8!
 
 	:: config.txt
 	
-		Você pode encontrar algumas configurações no arquivo config.txt. Edite o arquivo
+		Você pode encontrar algumas configurações no arquivo "config.txt". Edite o arquivo
 		apenas quando o PICO-8 não estiver rodando.
 		
 		Windows:	C:/Users/Yourname/AppData/Roaming/pico-8/config.txt
 		OSX: 		/Users/Yourname/Library/Application Support/pico-8/config.txt
 		Linux: 		~/.lexaloffle/pico-8/config.txt
 		
-		Use -home para trocar o local padrão para o arquivo config.txt.
+		Use o comando -home (ver abaixo) para trocar o local padrão do arquivo "config.txt".
 		
 		
 	:: Linha de comando
 	
-		// Nota: Estes comandos sobreescrevem o que está no config.txt
+		// Nota: Estes comandos sobrescrevem o que está presente no "config.txt".
 	
-		pico-8 [opções] [arquivo.p8]
+		pico-8 [comando] [arquivo.p8]
 	
-		-run                Carrega arquivo.p8 ao iniciar o Pico-8.
-		-width n            Define a largura da janela e ajusta a proporção se esta não for especificada.
-		-height n           Define a altura da janela e ajusta a proporção se esta não for especificada.
-		-scale n            Define o tamanho de cada pixel no PICO-8. "-scale 3" define os pixels como 3x3.
-		-windowed n         Define se PICO-8 será exibido em tela cheia (0) ou em uma janela (1).
-		-sound n            Define o volume entre 0 e 256.
-		-music n            Define volume da música entre 0 e 256.
-		-joystick n         Define controle para o jogador n (0..7).
-		-aspect n           Define o aspecto do pixel. 420 para 1:1 (padrão), 560 para 4:3, 525 para 5:4. 
-		-run filename       Carrega e executa um cartucho.
-		-splore             Carrefa em modo "splore".
-		-home path          Define o caminho para o arquivo config.txt e outros arquivos de configuração.
+		-run                Carrega arquivo.p8 ao iniciar o Pico-8;
+		-width n            Define a largura da janela e ajusta a proporção se esta não for especificada;
+		-height n           Define a altura da janela e ajusta a proporção se esta não for especificada;
+		-scale n            Define o tamanho de cada pixel no PICO-8. "-scale 3" define os pixels como 3x3;
+		-windowed n         Define se PICO-8 será exibido em tela cheia (0) ou em uma janela (1);
+		-sound n            Define o volume entre 0 e 256;
+		-music n            Define o volume da música entre 0 e 256;
+		-joystick n         Define o controle para o jogador n (0..7);
+		-aspect n           Define o aspecto do pixel. 420 para 1:1 (padrão), 560 para 4:3, 525 para 5:4;
+		-run filename       Carrega e executa um cartucho;
+		-splore             Carrega em modo "splore";
+		-home path          Define o caminho para o arquivo "config.txt" e outros arquivos de configuração;
 		-gif_len n          Define tamanho máximo para criar gifs em segundos (1..120).
 		
 		
 	:: Configuração de controle
 	
 		PICO-8 usa o esquema de controle conhecido como SDL2. Ele detecta controles comuns ao iniciar e
-		busca um mapeamento customizado para os botões em sdl_controllers.txt no mesmo diretório onde está 
-		o config.txt. sdl_controllers.txt tem um mapeamento por linha.
+		busca um mapeamento customizado para os botões em "sdl_controllers.txt", no mesmo diretório onde está 
+		o "config.txt". O arquivo "sdl_controllers.txt" possui um mapeamento por linha.
 	
 		Para gerar um mapeamento para seu controle, use o programa controllermap que vem com o SDL2, ou
 		experimente a ferramenta do site http://www.generalarcade.com/gamepadtool/
@@ -195,83 +195,81 @@ Bem vindo(a) ao PICO-8!
 
 	Existem 3 formas de compartilhar um cartucho:
 	
-		1. Distribua o arquivo .p8 ou .p8.png diretamente com outros usuários do PICO-8.
+		1. Distribua o arquivo ".p8" ou ".p8.png" diretamente com outros usuários do PICO-8;
 	
-		2. Publique o cartucho no BBS Lexaloffle para obter uma versão jogável na web.
+		2. Publique o cartucho no BBS Lexaloffle para obter uma versão jogável na web:
 
 			http://www.lexaloffle.com/pico-8.php?page=submit
+			Veja save() para dicas de como gerar uma versão ".p8.png." (procure por ".png").
 
-		Veja save() para dicas de como gerar uma versão .p8.png. (procure por .png)
-
-		3. Exporte o cartucho no formato html5:
+		3. Exporte o cartucho no formato HTML5:
 		
 			EXPORT FOO.HTML
 			
-			Este comando gerará dois arquivos: foo.html 3 foo.js (você vai precisar de ambos!)
+			Este comando gerará dois arquivos: foo.html e foo.js (você precisará de ambos!).
 			
 			Você pode usar e distribuir cartuchos como quiser, contanto que você tenha permissão
 			do autor e contribuintes.
 			
-			O arquivo .html tem o propósito de ser um template ue pode ser alterado caso necessário.
+			O arquivo .html tem o propósito de ser um template que pode ser alterado caso necessário.
 			Ele inclui alguns botões para controlar as configurações e um link para uma página 
 			(PICO-8 BBS cartridges por padrão), junto com um javascript para bloquear o comportamento
-			padrão do teclado, para previnir rolar a página enquanto o cartucho é executado.
+			padrão do teclado, para prevenir rolar a página enquanto o cartucho é executado.
 			
-			Perceba que a altura e largura do aplicativo podem ser configuradas, mas deve 
-			ser compatível com o canvas no qual é exibido (580,540 por padrão).
+			Perceba que a altura e largura do aplicativo podem ser configuradas, mas devem 
+			ser compatíveis com o canvas no qual é exibido (580,540 por padrão).
 
 
-:: Screenshots, Vídeos e Etiquetas de Cartuchos
+:: Screenshots, vídeos e etiquetas de cartuchos
 
 	Enquanto executar um cartucho, use:
 
-		F6 para salvar um screenshot (captura de tela) para a Área de Trabalho
-		F7 para capturar uma imagem para ser usada como etiqueta do cartucho
-		F8 para começar a gravar um vídeo
-		F9 para parar de gravar o vídeo e salvá-lo na Área de Trabalho (max: 8 segundos do padrão)
+		F6 para salvar um screenshot (captura de tela) na área de trabalho;
+		F7 para capturar uma imagem para ser usada como etiqueta do cartucho;
+		F8 para começar a gravar um vídeo;
+		F9 para parar de gravar o vídeo e salvá-lo na área de trabalho (máx.: 8 segundos por padrão).
 		
 		// Se F6..F9 não estiverem disponíveis no seu sistema, use F1..F4
 	
-	Etiqueta do Cartucho é salva como p8.png quando se usa o comando save().
+	A etiqueta do cartucho é salva como ".p8.png" quando se usa o comando save().
 	
-	Você pode salvar um vídeo a qualquer momento (PICO-8 está sempre gravando) -- use F8 para reiniciar
+	Você pode salvar um vídeo a qualquer momento (PICO-8 está sempre gravando); use F8 para reiniciar
 	a gravação a partir de um ponto específico.
 
-	Para mudar a duração máxima do gif, altere gif_len no arquivo config.txt para definir o número de 
-	segundos a serem gravados. O formato gif pode não resultar em 30fps (imagens por segundo) então
-	PICO-8  usa uma aproximação: 33.3fps.
+	Para mudar a duração máxima do gif, altere gif_len no arquivo "config.txt" para definir o número de 
+	segundos a serem gravados. O formato ".gif" pode não resultar em 30FPS (quadros por segundo) então
+	PICO-8 usa uma aproximação: 33,3FPS.
 	
 
-:: Exportadores e Importadores
+:: Exportadores e importadores
 
-	1. Para importar o exportar uma spritesheet (imagens de jogo) como .png:
+	1. Para importar ou exportar uma spritesheet (imagens de jogo) como ".png":
 	
-		import("blah.png")    --  Espera um png de 128x128 com cores compatíveis com a palheta do PICO-8
-		export("blah.png")    --  Salva o arquivo blah.png. use folder() para localizar o arquivo exportado
+		import("blah.png")    --  Pede um png de 128x128 com cores compatíveis com a palheta do PICO-8
+		export("blah.png")    --  Salva o arquivo blah.png. Use folder() para localizar o arquivo exportado
 	
 	2. Para exportar efeitos sonoros e música:
 	
-		export("blah.wav")    --  exporta musica da trilha atual quando o editor estiver em modo MÚSICA
-		export("blah.wav")    --  exporta o efeito sonoro atual quando o editor estiver em modo SFX
-		export("blah%d.wav")  --  exporta todos os efeitos sonoros seguindo o padrão 
-					  blah0.wav, blah1.wav .. blah63.wav
+		export("blah.wav")    --  Exporta música da trilha atual quando o editor estiver em modo MÚSICA
+		export("blah.wav")    --  Exporta o efeito sonoro atual quando o editor estiver em modo SFX
+		export("blah%d.wav")  --  Exporta todos os efeitos sonoros seguindo o padrão: blah0.wav, 
+					  blah1.wav .. blah63.wav
 
-		// Na linha de comando você pode ignorar os parênteses aspas, digitando: EXPORT BLAH.WAV 
+		// Na linha de comando você pode ignorar os parênteses e as aspas, digitando: EXPORT BLAH.WAV 
 
 
 :: Peculiaridades do PICO-8
 
 	Peculiaridades comuns a serem observadas:
-	
-	- A metade inferior do spritesheet e a metade inferior do mapa ocupam o mesmo espaço em memória.
-		// Melhor usar um ou outro se não souber como isto funciona.
-	- Números em PICO-8 tem o limite de 32767,99.
+	- A metade inferior do spritesheet e a metade inferior do mapa ocupam o mesmo espaço em memória;
+		// Melhor usar um ou outro se não souber como isto funciona
+	- Números em PICO-8 têm o limite de 32767,99;
 		// Se você adicionar 1 a um contador a cada frame, ele vai estourar em 18 minutos!
-	- Arrays em Lua começam em 1, e não 0. Assim, o comando FOREACH começa em T[1].
-	- cos() e sin() esperam valores entre 0 e 1 ao invés de 0 e PI * 2. E sin() está invertido.
-	- sgn(0) retorna 1.
-	- Mudando para tela cheia: use alt-enter no OSX (command-F é usado para buscar texto).
-	- Quando quiser exportar um cartucho .png, use SAVE e não EXPORT, pois este salvará apenas o spritesheet!
+	- Arrays em Lua começam em 1, e não 0. Assim, por exemplo, o comando FOREACH começa em T[1];
+	- cos() e sin() esperam valores entre 0 e 1 ao invés de 0 e PI * 2. E sin() está invertido;
+	- sgn(0) retorna 1;
+	- Mudando para tela cheia: use alt-enter no OSX (command-F é usado para buscar texto);
+	- Quando quiser exportar um cartucho ".png", use SAVE e não EXPORT, pois este salvará apenas o spritesheet!
 
 
 :: Splore
@@ -280,120 +278,119 @@ Bem vindo(a) ao PICO-8!
 	Digite SPLORE [enter] para iniciar o aplicativo, ou inicie o PICO-8 com o parâmetro -splore. 
 	
 	É possível controlar SPLORE inteiramente com um controle:
-	ESQUERDA e DIREITA navega por listas de cartuchos
-	CIMA e BAIXO seleciona itens em uma lista
-	X,O ou MENU para executar um cartucho
+	- ESQUERDA e DIREITA navegam por listas de cartuchos;
+	- CIMA e BAIXO selecionam itens em uma lista;
+	- X, O ou MENU para executar um cartucho.
 	
-	Enquanto executar um cartucho, pressione MENU para favoritar um cartucho ou voltar para o SPLORE.
+	Enquanto dentro de um cartucho, pressione MENU para favoritar um cartucho ou voltar para o SPLORE.
 	Se estiver usando um teclado, também é possível pressionar F para favoritar um item enquanto estiver
 	na listagem de cartuchos.
 	
-	Equanto estiver vendo uma lista de cartuchos do BBS, use o item no topo para para recarregar a lista
-	de cartuchos. Se estiver offline, a última lista carregada é exibida e ainda será possível jogar
+	Equanto estiver vendo uma lista de cartuchos do BBS, use o item no topo para recarregar a lista.
+	Se estiver offline, a última lista carregada é exibida e ainda será possível jogar
 	qualquer cartucho que você já tenha baixado.
 	
 	Se você estiver usando PICO-8 em uma máquina sem internet, você pode usar o comando INSTALL_GAMES para
-	adicionar uma pequena lista de cartuchos pre-instalados a sua lista de favoritos.
+	adicionar uma pequena lista de cartuchos pre-instalados à sua lista de favoritos.
 	
 
 ============================================================================================
-	Modos do Editor
+	Modos do editor
 ============================================================================================
 	
-	Pressione ESC para alternar entre Terminal e o Editor
+	Pressione ESC para alternar entre o terminal e o editor.
 	Clique nas abas no topo do editor para alternar entre os modos. Também é possível 
-	usar ALT+ESQUERDA/DIREITA
+	usar ALT-ESQUERDA/DIREITA.
 
 
 	** ALERTA: A segunda metade do spritesheet (bancos 2 e 3) e a metade de baixo do mapa
-	compartilham o mesmo espaço no cartucho. Você deve decidir como usar esta parte,
-	mas esteja atento para o fato de que desenhar sprites neste espaço pode estragar
-	um mapa na mesma área e vice-versa
+	compartilham o mesmo espaço no cartucho. Você deve decidir como usar essa parte,
+	mas esteja atento para o fato de que desenhar sprites nesse espaço pode estragar
+	um mapa na mesma área e vice-versa.
 	
 
-:: Editor de Código
+:: Editor de código
 	
-	Segure SHIFT para selecionar (ou clique e arraste com o mouse)
-	CTRL-X, C, V para cortar, copiar e colar o trecho selecionado
-	CTRL-Z, Y para desfazer ou refazer uma ação
-	CTRL-F para buscar um texto
-	CTRL-G para refazer a última busca
-	ALT-UP, DOWN para navegar entre as funções
+	Segure SHIFT para selecionar (ou clique e arraste com o mouse);
+	CTRL-X, C, V para cortar, copiar e colar o trecho selecionado;
+	CTRL-Z, Y para desfazer ou refazer uma ação;
+	CTRL-F para buscar um texto;
+	CTRL-G para refazer a última busca;
+	ALT-CIMA, BAIXO para navegar entre as funções.
 	
 	No canto inferior direito do editor você pode ver quantos tokens foram usados. Um programa
 	pode ter um máximo de 8192 tokens. Cada token representa uma palavra (ex.: nome de variáveis)
-	ou operador. Pares de Parênteses e palavras (strings) contam como um token. Vírgulas, pontos,
+	ou operador. Pares de parênteses e palavras (strings) contam como um token. Vírgulas, pontos,
 	LOCAL, ponto-e-vírgula, END e comentários não são contados.
 	
-	Para usar caracteres especiais, use SHIFT+L/R/U/D/O/X
+	Para usar caracteres especiais, use SHIFT+L/R/U/D/O/X.
 	
 
-:: Editor de Sprite
+:: Editor de sprites
 
-	O editor de sprite foi desenvolvido para desenhos detalhados quando para forma livre.
-	O navegador de sprites na parte inferior prmite visualização de sprites de 8x8 pixels,
+	O editor de sprites foi desenvolvido tanto para desenhos detalhados quanto para forma livre.
+	O navegador de sprites na parte inferior permite visualização de sprites de 8x8 pixels,
 	mas é possível usar ferramentas de forma livre (pan, seleção) quando lidando com formas
 	maiores ou de formatos diversos.
 
-	Ferramenta de Desenho
-		clique e arraste para desenhar um sprite
-		Aplicável na área visível
-		Segure CTRL para buscar e trocar uma cor
-		Use o botão esquerdo para selecionar uma cor
+	Ferramenta de desenho
+		Clique e arraste para desenhar um sprite;
+		Aplicável na área visível;
+		Segure CTRL para buscar e trocar uma cor;
+		Use o botão esquerdo do mouse para selecionar uma cor.
 
-	Ferramenta de Carimbo
-		Clique para carimbar uma forma salva 
-		Segure L-CTRL para carimbar com transparência
+	Ferramenta de carimbo
+		Clique para carimbar uma forma salva;
+		Segure L-CTRL para carimbar com transparência.
 
-	Ferramenta de Seleção // atalho: LSHIFT ou S
-		Cria uma seleção
-		Use ENTER ou clique para desselecionar.
+	Ferramenta de seleção 		// atalho: L-SHIFT ou S
+		Cria uma seleção;
+		Use ENTER ou botão esquerdo para desselecionar.
 	
-	Ferramenta de panorama // atalho: ESPAÇO
+	Ferramenta de panorama 		// atalho: ESPAÇO
 		Visualiza o spritesheet.
 	
-	Ferramenta de Preenchimento
-		Preenche uma área com a cor atual
-		Aplicável a uma seleção
-		Se não houver seleção, aplica na área visível
+	Ferramenta de preenchimento
+		Preenche uma área com a cor atual;
+		Aplicável a uma seleção;
+		Se nada estiver selecionado, aplica na área visível.
 
 	Outros comandos:
-		CTRL-Z para desfazer // um único passo versão 0.2.0
-		CTRL-C para copiar a área ou sprites selecionados
-		CTRL-V para colar no sprite atual
-		Q,W para alternar entre o próximo sprite e o anterior
-		1,2 para alternar entre a próxima cor e a anterior
-		Tab Para alternar entre modo tela cheia
-		Roda do Mouse para dar zoom (centralizado no modo tela cheia)
+		CTRL-Z para desfazer; 	// somente um passo na versão 0.2.0
+		CTRL-C para copiar a área ou sprites selecionados;
+		CTRL-V para colar no sprite atual;
+		Q, W para alternar entre o sprite seguinte e o anterior;
+		1, 2 para alternar entre a cor seguinte e a anterior;
+		TAB para alternar entre modo tela cheia e janela;
+		Roda do mouse para dar zoom (centralizado quando no modo tela cheia).
 	
 	
-	Operações na área ou sprite selecionados:
-		f para espelhar horizontalmente
-		v para espelhar verticalmente
-		r para rotacionar (deve ser uma área quadrada)
-		Setas do teclado para mover (realiza looping quando vendo sprite)
+	Operações na área ou sprite selecionado:
+		F para espelhar horizontalmente;
+		V para espelhar verticalmente;
+		R para rotacionar (deve ser uma área quadrada);
+		Setas do teclado para mover (realiza looping quando vendo sprite).
 		
-	Flags de Sprite
+	Flags de sprite
 		Os 8 círculos coloridos são flags para o sprite atual. Cada um pode
-		estar ligado (TRUE) ou desligado (FALSE), e são acessáveis pelas funções
-		FSET e FGET. Elas são indexadas a partir de 0 (0,1,2..7).
-		vEJA fset() para mais informações.
+		estar ligado (VERDADEIRO) ou desligado (FALSO), e são acessados pelas funções
+		FSET e FGET. Elas são indexadas a partir de 0 (0, 1, 2..7).
+		Veja fset() para mais informações.
 	
 
-:: Editor de Mapa
+:: Editor de mapa
 
 	O mapa no PICO-8 é um bloco de 128 por 32 (ou 128 por 64 se usar o espaço compartilhado)
-	de valores de 8 bits. Cada calor é exibido no editor como a referência de um sprite
-	(0 a 255), mas você pode usar estes dados para definir o que você quiser.
+	de valores de 8 bits. Cada valor é exibido no editor como a referência de um sprite
+	(0 a 255), mas você pode usar esses dados para definir o que você quiser.
 
-	As ferramentas são semelhantes ao editor de sprites. Selecione um Sprite e clique e arraste
+	As ferramentas são semelhantes ao editor de sprites. Selecione um sprite e clique e arraste
 	para pintar o mapa.
 
-	Para desenhar vários sprites, selecione-os com SHIFT+MOUSE
-	Para copiar um bloco, use a ferramenta de seleção e então o carimbo
-	Para passear pelo mapa, use a ferramenta de panorama ou segure ESPAÇO
-	Q,W para alternar entre o sprite anterior e o seguinte
-
+	- Para desenhar vários sprites, selecione-os com SHIFT-MOUSE;
+	- Para copiar um bloco, use a ferramenta de seleção e então o carimbo;
+	- Para passear pelo mapa, use a ferramenta de panorama ou segure ESPAÇO;
+	- Q, W para alternar entre o sprite anterior e o seguinte.
 
 
 :: Editor de SFX (SFX)
@@ -401,135 +398,135 @@ Bem vindo(a) ao PICO-8!
 	Existem 64 SFX ("efeitos sonoros") em um cartucho, usados tanto para sons quanto para música.
 	
 	Cada SFX contém 32 notas e cada uma possui:
-		Uma frequência	(C0..C5) Onde C=Dó, D=Ré, etc
-		Um instrumento	(0..7)
-		Um volume	(0..7)
-		Um efeito	(0..7)
+		Uma frequência	(C0..C5) Onde C=Dó, D=Ré, etc.;
+		Um instrumento	(0..7);
+		Um volume	(0..7);
+		Um efeito	(0..7).
 	
 	Cada SFX também possui as seguintes propriedades:
 	
-		Uma velocidade (SPD) : O número de ciclos pelo qual uma nota será tocada.
+		Uma velocidade (SPD) : O número de ciclos pelo qual uma nota será tocada;
 			// Isto significa que 1 é o mais rápido, 4 é duas vezes mais lento que 2, etc.
 		
-		Início e fim de repetição : define os índices para realizar uma repetição
+		Início e fim de repetição : define os índices para realizar uma repetição.
 			// Repetição é desativada quando o início é maior ou igual ao fim
 	
-	Existem duas formas de editar/visualizar um SFX: Modo Pitch (mais adequado para efeitos sonoros)
+	Existem duas formas de editar/visualizar um SFX: modo pitch (mais adequado para efeitos sonoros)
 	e faixa (melhor para música). O modo pode ser alternado usando os botões no canto supeiror
 	esquerdo ou usando TAB.
 	
 	
-	1. Modo Pitch
+	1. Modo pitch
 	
-		Clique e arraste na área para definir a frequência da nota usando o instrumento
-		atual (indicado pela cor).
+		Clique e arraste na área para definir a frequência de cada nota,
+		usando o instrumento atual (indicado pela cor).
 		
-		Segure SHIFT para aplicar apenas o instrumento selecionado
-		Segure CTRL para deslocar as notas na escala de C menor	
+		Segure SHIFT para aplicar apenas o instrumento selecionado;
+		Segure CTRL para deslocar as notas na escala de C-menor.	
 	
 	2. Modo de trilha
 	
-		Cada nota apresenta: Frequencia, oitava, instrumento, volume, efeito
-		para adicionar uma nota, use q2w3er5t6y7ui zsxdcvgbhnjm (semelhante a um piano)
-		Novas notas seguirão o instrumento e efeito selecionados
-		Para apagar uma nota use BACKSPACE ou marque o volume como 0
+		Cada nota apresenta: frequência, oitava, instrumento, volume e efeito;
+		Para adicionar uma nota, use q2w3er5t6y7ui zsxdcvgbhnjm (semelhante a um piano);
+		Novas notas seguirão o instrumento e efeito selecionados;
+		Para apagar uma nota use BACKSPACE ou marque o volume como 0.
 	
-		Clique e depois SHIFT+Clique para definir uma área a ser copiada
-		(CTRL+C) e colada (CTRL+V)
+		Clique e depois SHIFT-CLIQUE para definir uma área a ser copiada
+		(CTRL-C) e colada (CTRL-V).
 		
 		
 	3. Controles para ambos os modos
 	
-		- + para navegar no SFX atual
-	    	< > para alterar velocidade
-		ESPAÇO para reproduzir ou parar
-		A Para liberar uma repetição
-		Clique com o botão direito ou equerdo para reduzir ou aumentar a velocidade ou indice da repetição
+		- + para navegar no SFX atual;
+	    	< > para alterar velocidade;
+		ESPAÇO para reproduzir ou parar;
+		A para criar uma repetição de exemplo;
+		CLIQUE com o botão DIREITO ou ESQUERDO para reduzir ou aumentar a velocidade ou índice da repetição, respectivamente;
 		 // Segure SHIFT para aumentar ou reduzir de 4 em 4
-		 // Alternativamente, clique e arraste para direita e esquerda ou para cima e para baixo
-		SHIFT+Clique em um instrumento, efeito ou volume para definí-lo para todas as notas.
+		 // É possível também clicar e arrastar para direita e esquerda, ou para cima e para baixo
+		SHIFT-CLIQUE em um instrumento, efeito ou volume para definí-lo para todas as notas.
 	
 	
 	:: Efeitos
 	
 		0 nenhum
-		1 slide          //  Distorce a nota até atingir a frequencia da seguinte
-		2 vibrato        //  Rapidamente alterna a frequencia da nota em um quarto de tom
-		3 drop           //  Rapidamente reduz a frequencia para um valor baixo
-		4 fade in        //  Aumenta o volume a partir de 0
+		1 slide          //  Distorce a nota até atingir a frequência da seguinte
+		2 vibrato        //  Rapidamente alterna a frequência da nota em um quarto de tom
+		3 drop           //  Rapidamente reduz a frequência para um valor muito mais baixo
+		4 fade in        //  Aumenta o volume, começando em 0
 		5 fade out       //  Reduz o volume até 0
-		6 arpeggio fast  //  Itera sobre um grupo de 4 notas em velocidade 4
-		7 arpeggio slow  //  Itera sobre um grupo de 4 notas em velocidade 8
+		6 arpeggio fast  //  Repete grupos de 4 notas em velocidade 4
+		7 arpeggio slow  //  Repete grupos de 4 notas em velocidade 8
 		
-		Se a velogidade do SFX for menor ou igual a 8, a velocidade do arpeggio altera para 2, 4
+		Se a velocidade do SFX for menor ou igual a 8, a velocidade do arpeggio altera para 2, 4.
 
 
-:: Editor de Música
+:: Editor de música
 
-	Música em PICO-8 é controlada por uma sequência de 'modelos'. Cada modelo é uma lista de
+	Música em PICO-8 é controlada por uma sequência de "modelos". Cada modelo é uma lista de
 	4 números indicando qual SFX será tocado em qual canal.
 	
 	
 	:: Controle de fluxo
 	
-		O fluxo pode ser controlado pelos 3 botões no canto superior direito.
+		O fluxo pode ser controlado pelos três botões no canto superior direito.
 	
 		Quando um modelo termina de ser reproduzido, o próximo modelo é executado, a não ser que:
-	
-		- Não existe mais o que ser reproduzido (música para)
-		- um comando de PARADA (STOP) é definido no modelo (primeiro botão)
-		- um comando de REPETIR (LOOP BACK) é definido (terceiro botão), assim o reprodutor de música
-			busca por um modelo com o comando INÍCIA REPETIÇÃO (LOOP START) (segundo botão)
-			ou retorna para o modelo 0 se não encontrar.
+		- Não exista mais nada para ser reproduzido (música para);
+		- Um comando de PARADA (STOP) estiver presente no modelo (primeiro botão);
+		- Um comando de REPETIR (LOOP BACK) estiver presente (terceiro botão), assim o reprodutor
+		   busca por um modelo com o comando INICIAR REPETIÇÃO (LOOP START) (segundo botão)
+		   ou retorna para o modelo 0 se não encontrá-lo.
 	
 		Quando um modelo possuir SFXs com velocidades diferentes, o modelo para de ser reproduzido
-		no momento que o canal mais a esquerda e sem repetição terminar de ser reproduzido.
-		Isto pode ser usado para definir tempos irregulares ou bateria com tempo dobrado, etc.
+		no momento que o canal mais à esquerda e sem repetição terminar de ser reproduzido.
+		Isto pode ser usado para definir tempos irregulares, baterias com tempo dobrado etc.
 	
 	
-	:: Copiando músicas entre cartuchos ou dendtro de um cartucho
+	:: Copiando músicas entre cartuchos ou dentro de um cartucho
 	
 		Para selecionar um grupo de modelos: clique uma vez no primeiro modelo no navegador,
-		então use SHIFT+clique no último modelo. Modelos selecionados podem ser copiados
-		e colados com CTRL+C e CTRL+V. Quando colar em outro cartucho, o SFX de cada modelo
+		então use SHIFT-CLIQUE no último modelo. Modelos selecionados podem ser copiados
+		e colados com CTRL-C e CTRL-V. Quando colar em outro cartucho, o SFX de cada modelo
 		também será copiado (possívelmente com índice diferente) se este já não existir.
 
 	
 ============================================================================================
-	Cartilha de Sintaxe Lua
+	Cartilha de sintaxe Lua
 ============================================================================================
 
-Programas para o PICO-8 são escritos usando Lua, mas não usam a biblioteca padrão Lua.
-A seguir está um breve sumário da sintaxe exencial para Lua.
+Programas para o PICO-8 são escritos usando Lua, mas não usam a biblioteca padrão do Lua.
+A seguir está um breve sumário da sintaxe essencial para Lua.
 
-Para mais detalhes, ou para saber mais sobre o Lua oficial, veja www.lua.org.
+Para mais detalhes, ou para saber mais sobre o Lua oficial, visite www.lua.org.
 
 	NOTA DO TRADUTOR: PICO-8 não permite o uso de acentos. Alguns exemplos neste documento
-		apresentam acento para proporcionar clareza do leitor.
+		apresentam acento para proporcionar clareza ao leitor.
 
 :: Comentários
 
-	-- Use dois hífens (sinal de menos) para ignorar o trecho até o final da linha.
-	--[[ Comentários
-	com linhas múltiplas ]]
+	Use dois hífens ("--") para ignorar o trecho até o final da linha;
+	Use "--[[" e "]]" para comentários de múltiplas linhas. Ex.:
+		--[[ Comentários
+		de múltiplas linhas ]]
 	
 	
 :: Tipos e atribuições
 
-	Os tipos em Lua são Números, Cadeias (strings), Boleanos (VERDADEIRO e FALSO) e Tabelas;
+	Os tipos em Lua são números, cadeias (strings), boleanos (VERDADEIRO e FALSO) e tabelas:
 
 	NUM = 12/100
 	S = "Isto é uma cadeia de caracteres"
 	B = FALSE
 	T = {1,2,3}
 	
-	Números em PICO-8 podem estar entre -32768.0 e 32767.99
+	Números em PICO-8 podem estar entre -32768.0 e 32767.99.
 	
 	Números hexadecimais com opção para frações podem ser usados:
 		0x11        -- 17
 		0x11.4000   -- 17.25
 	
-	Dividir por zero resulta no maior número possível: 0x7fff.ffff
+	Dividir por zero resulta no maior número possível: 0x7fff.ffff.
 	
 
 :: Condicionais
@@ -562,7 +559,7 @@ Para mais detalhes, ou para saber mais sobre o Lua oficial, veja www.lua.org.
 	FOR X=1,5 DO
 		PRINT(X)
 	END
-	-- prints 1,2,3,4,5
+	-- exibe 1, 2, 3, 4, 5
 
 	X = 1
 	WHILE(X <= 5) DO
@@ -570,9 +567,9 @@ Para mais detalhes, ou para saber mais sobre o Lua oficial, veja www.lua.org.
 		X = X + 1
 	END
 	
-	FOR X=1,10,3 DO PRINT(X) END   -- 1,4,7,10
+	FOR X=1,10,3 DO PRINT(X) END	-- 1, 4, 7, 10
 
-	FOR X=5,1,-2 DO PRINT(X) END  -- 5,3,1
+	FOR X=5,1,-2 DO PRINT(X) END	-- 5, 3, 1
 	
 
 :: Funções e variáveis locais
@@ -582,78 +579,76 @@ Para mais detalhes, ou para saber mais sobre o Lua oficial, veja www.lua.org.
 		LOCAL Y = X+1
 		RETURN Y
 	END
-	PRINT(MAISUM(2)) -- 3
-	PRINT(Y)          -- 0
+	PRINT(MAISUM(2))	-- 3
+	PRINT(Y)        	-- 0
 
 
 :: Tabelas
 	
-	Em Lua, tabelas são coleções de pares de informação chave/valor onde chaves e valores podem
-	ser de tipos misturados.
-	Elas podem ser usadas como arrays usando como índices numéros inteiros (1,2,3,...).
+	Em Lua, tabelas são coleções de pares de informação chave-valor, onde chaves e valores podem
+	ser de tipos misturados. Elas podem ser usadas como arrays se indexá-las com numéros inteiros (1, 2, 3, ...).
 
 	A={} -- cria uma tabela vazia
 	A[1] = "BLAH"
 	A[2] = 42
 	A["FOO"] = {1,2,3}
 
-	-- Arrays começam com índice um por padrão
+	-- Arrays começam com índice 1 por padrão
 	
 	A = {11,12,13,14}
 	PRINT(A[2]) -- 12
 	
-	-- O tamanho da tabela pode ser acessado usando # antes da tabela:
+	-- O tamanho da tabela pode ser acessado usando # antes da tabela
 	
 	PRINT(#A)   -- 4
 	
-	-- indices que são palavras podem ser escritas com a notação de ponto
+	-- Índices que são strings podem ser escritos com a notação de ponto
 	
 	PLAYER = {}
 	PLAYER.X = 2 -- equivale a PLAYER["X"]
 	PLAYER.Y = 3
 
-	-- veja também tabelas nas referencias de API abaixo.
+	-- Veja também a seção de tabelas tabelas nas referências de API
 
 	
-:: PICO-8 Abreviações
+:: Abreviações no PICO-8
 
-	PICO-8 permite abreviar modelos padrão de maneira não usual.
+	PICO-8 também permite utilizar abreviações fora do padrão.
 	
-	1. IF THEN END  em uma única linha:
+	1. Funções "IF THEN END" em uma única linha podem ser expressas sem "THEN" e "END":
 	
 	IF (NOT B) I=1 J=2
 	
 	-- É equivalente a: IF (NOT B) THEN I=1 J=2 END
-	-- Perceba que o condicional DEVE estar entre parenteses.
-	
+	-- Note que o condicional DEVE estar entre parênteses
 	
 	2. Operadores matemáticos unários
 	
-	a += 2  -- equivalente a: a = a + 2
-	a -= 2  -- equivalente a: a = a - 2
-	a *= 2  -- equivalente a: a = a * 2
-	a /= 2  -- equivalente a: a = a / 2
-	a %= 2  -- equivalente a: a = a % 2
+	x += 2  -- equivalente a: x = x + 2
+	x -= 2  -- equivalente a: x = x - 2
+	x *= 2  -- equivalente a: x = x * 2
+	x /= 2  -- equivalente a: x = x / 2
+	x %= 2  -- equivalente a: x = x % 2
 	
 	
-	3. != operador
+	3. Operador "!="
 	
-	Não é uma abreviação, mas pico-8 aceita também != no lugar de ~= para "não igual a"
+	Não é uma abreviação, mas PICO-8 aceita também "!=" no lugar de "~=" para "não igual a".
 
 
 ============================================================================================
 	API (Interface de Programação de Aplicação)
 ============================================================================================
 
-	PICO-8 é construido sobre a linguagem de programação Lua scripting language, porém não
-	inclui a biblioteca padrão. Ao invés disto, uma pequena API é oferecida para manter o
-	design minimalista e o espaço limitado da tela do PICO-8. Para um exemplo de um programa
-	que usa a maioria das funções da API, veja /DEMOS/API.P8 
+	PICO-8 é construído sobre a linguagem de programação Lua, porém não inclui a biblioteca
+	padrão. Ao invés disto, uma pequena API é oferecida para manter o design minimalista e
+	o espaço limitado da tela do PICO-8. Para um exemplo de um programa que usa a maioria
+	das funções da API, veja /DEMOS/API.P8.
 	
 	Funções serão escritas seguindo o padrão abaixo:
-	nome_da_função parametros [parametros_opcionais]
+	nome_da_função parâmetros [parâmetros_opcionais]
 
-	Funções de sistema chamadas por linha de comando podem omitir parenteses e aspas:
+	Funções de sistema chamadas por linha de comando podem omitir parênteses e aspas:
 	load blah.p8 --> load("blah.p8")
 
 	
@@ -664,40 +659,40 @@ Para mais detalhes, ou para saber mais sobre o Lua oficial, veja www.lua.org.
 
 load nome_arquivo
 save nome_arquivo
-	Carrega ou salva um cartucho
+	Carrega ou salva um cartucho.
 	
-	Use ".png" para salvar um cartucho no formato png -- caso contrário, o formato texto (".p8") é usado.
+	Use ".png" para salvar um cartucho no formato ".png", caso contrário, o formato de texto (".p8") será utilizado.
 	
-	O ".p8" pode ser omitido em ambos os casos, e será automaticamente adicionado
+	O ".p8" pode ser omitido em ambos os casos, e será automaticamente adicionado:
 		save("blah") --> save("blah.p8")
 		save("blah.png") --> save("blah.p8.png")
-		load("blah.png") --> load("blah.p8.png") (se blah.png não existir!)
+		load("blah.png") --> load("blah.p8.png") (se "blah.png" não existir!)
 	
 	O mesmo vale para carregar. Se um arquivo não é encontrado, PICO-8 tentará novamente com ".p8".
 	
-	O ".png" também pode ser omitido, mas apenas ao carregar
+	O ".png" também pode ser omitido, mas apenas ao carregar:
 		load ("blah") --> tenta carregar "blah.p8.png" e então "blah.png" se "blah.p8" não existir
 	
-	Assim que um cartucho for carregado ou salvo, ele também pode ser salvo usando CTRL+S
+	Assim que um cartucho for carregado ou salvo, ele também pode ser salvo usando CTRL+S.
 
 
-	:: Salvando cartuchos .png com um Título e uma imagem
+	:: Salvando cartuchos ".png" com um título e uma imagem
 	
-	Para gerar uma imagem a ser salvada com o cartucho, execute o programa e pressione F7 para 
+	Para gerar uma imagem a ser salva com o cartucho, execute o programa e pressione F7 para 
 	capturar a imagem que estiver na tela. As primeiras duas linhas do programa começando com
-	'--' também serão desenhadas no cartucho como Título do cartucho.
+	'--' também serão exibidas no cartucho como título do cartucho.
 
-	Ex.
+	Ex.:
 	-- OCEAN DIVER LEGENDS
-	-- BY LOOPY
+	-- POR LOOPY
 	
 	
-	:: Restrições no tamanho do código para o formato .png
+	:: Restrições no tamanho do código para o formato ".png"
 	
-	Quando salvando no formato .png, o tamanho compactado do arquivo deve ser menor que 15360 bytes. Para
+	Quando salvando no formato ".png", o tamanho compactado do arquivo deve ser menor que 15.360 bytes. Para
 	verificar o tamanho do código, use o comando INFO. O tamanho compactado não é forçado quando usando o
-	formato .p8. Na maioria dos casos, você não precisa se preocupar com o tamanho compactado já que o
-	limite de tokens (8192) é alcançado antes.
+	formato ".p8". Na maioria dos casos, não é necessário se preocupar com o tamanho compactado já que o
+	limite de tokens (8192) é atingido antes.
 
 
 folder
@@ -707,27 +702,27 @@ ls
 	lista todos os arquivos na pasta atual.
 
 run
-	Executa um programa a partir do início.
-	Pode ser chamado dentro do programa para ressetar o cartucho.
+	Executa um programa do seu início;
+	Pode ser chamado dentro do programa para resetar o cartucho.
 
 resume
 	Executa a partir do último estado do cartucho (flakey).
 
 reboot
-	Reinicia a máquina.
+	Reinicia a máquina;
 	Útil para começar um novo projeto.
 
 stat x
-	x:0 retorna o uso de memória do Lua (0..1024MB)
-	x:1 retorna o uso de CPU no último frame (1.0 significa 100% a 30fps)
+	x = 0; retorna o uso de memória do Lua (0..1024MB);
+	x = 1; retorna o uso de CPU no último frame (1.0 significa 100% a 30FPS).
 
 info
-	Imprime algumas informações sobre o cartucho:
-	Tamanho do código, tokens, tamanho compactado
+	Imprime algumas informações sobre o cartucho, tais como:
+	Tamanho do código, tokens e tamanho compactado.
 	
 flip
-	Grava o que está em buffer na tela e aguarda o próximo frame (30fps)
-	Não precisa fazer isso normalmente -- _draw() fará isto por você.
+	Grava o que está em buffer na tela e aguarda o próximo frame (30FPS);
+	Não é necessário fazer isso em geral; _draw() fará isto por você.
 
 printh str
 	Imprime a string para o terminal do sistema operacional, para analizar código.
@@ -737,35 +732,34 @@ printh str
 	Estrutura de um programa
 --------------------------------------------------------------------------------------------
 
-	Existem 3 funções especiais que, se definidas, serão executadas durante a execução do
+	Existem 3 funções especiais que, se definidas, serão chamadas durante a execução do
 	programa:
 	
 		_update()
-			invocada a cada atualização a 30fps
+			Chamada a cada atualização a 30FPS;
 	
 		_draw()
-			invocada uma vez pra cada frame visível
+			Chamada uma vez para cada frame visível;
 		
 		_init()
-			invocada uma vez quando o programa começa
+			Chamada uma vez quando o programa começa.
 
 
-	_draw() normalmente é invocada a 30fps, mas se não puder ser realizada a tempo, PICO-8
-	irá tentar executá-la a 15ps e invocar _update() duas vezes por frame para compensar.
+	_draw() normalmente é chamada a 30FPS, mas se não puder ser realizada a tempo, PICO-8
+	irá tentar executá-la a 15FPS e chamar _update() duas vezes por frame para compensar.
 	
 	
-	
-	:: Executando PICO-8 a 60fps
+	:: Executando PICO-8 a 60FPS
 
-		Se _update60() for definido no lugar de _update(), PICO-8 irá executar em modo 60fps:
+		Se _update60() for definido no lugar de _update(), PICO-8 irá executar em modo 60FPS:
 	
-			- ambos _update60() e _draw() serão invocados a 60fps
-			- metade do CPU do PICO-8 está disponível por frame antes de cair para 30fps
+			- Ambos _update60() e _draw() serão invocados a 60FPS;
+			- Metade do CPU do PICO-8 está disponível por quadro antes de cair para 30FPS.
 
-		** Atenção ao fato que nem todas as versões do PICO-8 suportam 60fps. Em máquinas que
-		não suportam este modo, _update60() será invocada duas vezes por frame e _draw() a 30fps.
-		Você pode verificar o comportamento do seu programa rodando a 30fps adicionando o seguinte
-		trecho ao final do código :
+		** Atenção ao fato que nem todas as versões do PICO-8 suportam 60FPS. Em máquinas que
+		não suportam este modo, _update60() será chamada duas vezes por quadro e _draw() a 30FPS.
+		Você pode verificar o comportamento do seu programa rodando a 30FPS adicionando o seguinte
+		trecho ao final do código:
 	
 		u60=_update60 _update60=nil function _update() u60() u60() end
 
@@ -774,146 +768,113 @@ printh str
 	Gráficos
 --------------------------------------------------------------------------------------------
 
-	PICO-8 possui um banco único de 128 8x8 sprites, mais um adicional de 128 que sobrepõe
+	PICO-8 possui um banco único de 128 sprites 8x8, mais um adicional de 128 que sobrepõe
 	a metade inferior dos dados de mapa ("dados compartilhados"). estes 256 sprites são chamados
-	coletivamente de spritesheet e podem ser encarados como uma imagem de 128 por 128 pixels.
+	coletivamente de spritesheet e podem ser vistos como uma imagem de 128 por 128 pixels.
 
 	Todas as operações de desenho do PICO-8 estão sujeitas ao draw-state atual. O draw-state
-	inclue posição da câmera (para movimento das cordenadas), mapeamento de cores (para mudar as
-	cores de um sprite), corte retângular e cor de desenho, que podem ser redefinidas por qualquer
-	função opcionalmente, persistindo caso contrário.
+	inclue posição da câmera (para movimento das coordenadas), mapeamento de cores (para mudar as
+	cores de um sprite), corte retangular e cor de desenho, que podem ser redefinidas opcionalmente
+	por qualquer função, mas sempre persistindo.
 
-	o draw-state é reiniciado toda a vez que o programa é executado. é o equivalente a invocar:
-	clip() camera() pal() color()
+	o draw-state é reiniciado toda vez que o programa é executado. É o equivalente a chamar:
+	clip(), camera(), pal() ou color().
 
 	Índice de cores:
 	
-	 0  preto	 1  azul_escuro		 2  roxo_escur		 3  verde_escuro  
+	 0  preto	 1  azul_escuro		 2  roxo_escuro		 3  verde_escuro  
 	 4  marrom	 5  cinza_escuro	 6  cinza_claro		 7  branco
 	 8  vermelho	 9  laranja		10  amarelo		11  verde       
-	12  azul   	13  indigo     		14  rosa		15  pêssego
+	12  azul   	13  índigo     		14  rosa		15  pêssego
 
 
 clip [x y w h]
-
-	Define o corte da tela para a região definida em pixels
-	clip() para retornar ao padrão
-	
+	Define o corte da tela para a região definida em pixels;
+	clip() para retornar ao padrão.
 	
 pget x y
 pset x y [c]
-
 	Recupera ou define a cor (c) de um pixel na posição x, y.
-	
 	
 sget x y
 sset x y [c]
-
-	Recupera ou define a cor (c) de um pixel no spritesheet.
-	
+	Recupera ou define a cor (c) de um pixel do spritesheet.
 	
 fget n [f]
 fset n [f] v
-
-	Recupera ou define o valor (v) da flag de um sprite
-	f é o índice da flag de 0..7
-	v é um boleando, podendo ser TRUE ou FALSE
+	Recupera ou define o valor (v) da flag de um sprite;
+	f: índice da flag de 0..7;
+	v: boleano, podendo ser TRUE ou FALSE.
 	
 	O valor inicial das flags é definível pelo editor de sprites,
-	usando a linha de botões circulares coloridos.
+	utilizando a linha de botões circulares coloridos.
 	
-	O significado de uma flag de sprite está a cargo do usuário, podem ser,
-	por exemplos, usados para indicar um grupo de sprites.
+	O significado de uma flag de um sprite está a cargo do usuário, podendo ser,
+	por exemplo, usadas para classificar diferentes sprites dentro de um mesmo grupo.
 
-	Se a flag for omitida da chamada da função, todas as flags são recuperadas ou definidas
-	fset(2, 1+2+8)   -- define bits 0,1 e 3
-	fset(2, 4, true) -- define bit 4
+	Se a flag for omitida da chamada da função, todas as flags são recuperadas ou definidas:
+	fset(2, 1+2+8)   -- define bits 0, 1 e 3
+	fset(2, 4, true) -- define o bit 4
 	print(fget(2))   -- 27 (1+2+8+16)
 
-
 print str [x y [col]]
-
-	Imprime uma palavra na tela.
-	Se apenas a palavra for passada como parâmetro e chegar ao fim da linha,
-	a tela rolará para abrir espaço para uma nova linha.
-
+	Imprime texto na tela;
+	Se apenas o text for passado como parâmetro e chegar ao fim da tela,
+	o texto ganhará um estilo de rolagem vertical automaticamente.
 
 cursor x y
-
-	Define a posição do cursos e margem
-
+	Define a posição do ponteiro e da margem.
 
 color col
+	Define o valor padrão de cor que será usada em funções de desenho.
 
-	Define valor padrão de cor para ser usada em funções de desenho
-	
-	
 cls
-
-	limpa a tela
-
+	limpa a tela.
 
 camera [x y]
-
-	Move a câmera para uma posição -x, -y para todas as operações de desenho
-	camera() para retornar ao padrão
-	
+	Coloca a câmera na posição x, y para todas as operações de desenho;
+	camera() para retornar ao padrão.
 	
 circ     x y r [col]
 circfill x y r [col]
-
-	Desenha ou preenche um círculo na posição x,y com raio r
-
+	Desenha ou preenche um círculo na posição x, y com raio r.
 
 line x0 y0 x1 y1 [col]
-
-	desenha uma linha
-
+	desenha uma linha.
 
 rect     x0 y0 x1 y1 [col]
 rectfill x0 y0 x1 y1 [col]
-
-	desenha ou preenche um retângulo
-	
+	desenha ou preenche um retângulo.
 
 pal c0 c1 [p]
+	Desenha todas as instâncias da cor c0 como cor c1.
 
-	Desenha todas as instâncias da cor c0 como cor c1
-
-	pal() para retornar ao padrão (incluíndo transparência)
+	pal() para retornar ao padrão (incluíndo transparência);
 	Dois tipos de palhetas (p; padrão 0)
-		0 palheta de desenho	: cores são remapeadas ao desenhar// ex. para recolorir sprites
-		1 palheta de tela	: cores são remapeadas na tela    // ex. para escurecer
-	c0 índice da cor original 0..15
-	c1 índice da cor a ser aplicada
+		0 palheta de desenho	-- cores são remapeadas ao desenhar; ex.: para recolorir sprites
+		1 palheta de tela	-- cores são remapeadas na tela; ex.: para escurecer a tela
+	c0 índice da cor original 0..15;
+	c1 índice da cor a ser aplicada.
 	
-
 palt c t
-
-	Define a transparência de uma cor c a um valor t (boleano)
-	Transparência é respeitada por spr(), sspr() e map()
-	ex. palt(8, true) -- pixels vermelhos não são desenhados
-	palt() para retornar ao padrão: todas as cores ficam opacas, exceto preto 0
+	Define a transparência de uma cor c a um valor t (boleano);
+	Transparência é respeitada por spr(), sspr() e map();
+	Ex.: palt(8, true) -- pixels vermelhos não serão desenhados
+	palt() para retornar ao padrão: todas as cores ficam opacas, exceto a cor 0 (preto).
 	
-
-
 spr n x y [w h] [flip_x] [flip_y]
-
-	Desenha o sprite n (0..255) na posição x,y
-	largura e altura (h,w) são 1,1 po padrão e define de quantos sprites a imagem é composta.
-	a cor 0 é transparente por padrão. Usar palt() para alterar.
-	flip_x=true para espelhar horizontalmente
-	flip_y=true para espelhar verticalmente
-
+	Desenha o sprite n (0..255) na posição x, y;
+	Largura e altura (h, w) são (1, 1) por padrão e define o que será exibido do spritesheet;
+	A cor 0 é transparente por padrão. Usar palt() para alterar;
+	flip_x=true para espelhar horizontalmente;
+	flip_y=true para espelhar verticalmente.
 
 sspr sx sy sw sh dx dy [dw dh] [flip_x] [flip_y]
-
-	pega um retângulo no spritesheet (definido por sx, sy, sw, sh) // em pixels
-	e desenha no retângulo (definido por dx, dy, dw, dh)
-	a cor 0 é transparente por padrão.
-	flip_x=true para espelhar horizontalmente
-	flip_y=true para espelhar verticalmente
-	flip_y=true to flip vertically
+	Pega um retângulo no spritesheet (definido por sx, sy, sw, sh) -- em pixels
+	E desenha no retângulo (definido por dx, dy, dw, dh);
+	A cor 0 é transparente por padrão;
+	flip_x=true para espelhar horizontalmente;
+	flip_y=true para espelhar verticalmente;
 
 
 --------------------------------------------------------------------------------------------
@@ -922,9 +883,8 @@ sspr sx sy sw sh dx dy [dw dh] [flip_x] [flip_y]
 	
 	
 add t v
-
-	Adiciona v ao final da tabela t.
-	Equivalente a t[#t+1] = v
+	Adiciona v ao final da tabela t;
+	Equivalente a t[#t+1] = v:
 
 		FOO={}        -- cria tabela vazia
 		ADD(FOO, 11)
@@ -932,11 +892,10 @@ add t v
 		PRINT(FOO[2]) -- 22
 
 del t v
-
-	Apaga a primeira instância do valor v da tabela t
-	Os valores restantes são realocados para evitar buracos.
+	Apaga a primeira instância do valor v da tabela t;
+	Os valores restantes são movidos para evitar buracos;
 	Perceba que v é o valor de um item a ser deletado, não o índice na tabela!
-	del() pode ser chamada com segurança ao iterar pelos elementos de uma tabela.
+	del() pode ser chamada com segurança ao iterar pelos elementos de uma tabela:
 
 		A={1,10,2,11,3,12}
 		FOR ITEM IN ALL(A) DO
@@ -945,9 +904,7 @@ del t v
 		FOREACH(A, PRINT) -- 10,11,12
 		PRINT(A[3])       -- 12
 
-
 all t
-
 	Usado dentro de repetições do tipo FOR para iterar entre todos os elementos de uma tabela,
 	contanto que o índice seja numérico.
 	
@@ -957,19 +914,15 @@ all t
 		FOR V IN ALL(T) DO PRINT(V) END -- 11 12 13 14 HI
 		PRINT(#T) -- 5
 
-
 foreach t f
-
-	para cada item na tabela t, execute a função f usando o item como parâmetro.
+	Para cada item na tabela t, execute a função f usando o item como parâmetro:
 	
 		FOREACH(T, PRINT)
 
-
 pairs t
-
 	Usada para iterar entre os elementos de uma tabela, retornando tanto a chave
-	quanto o valor de cada item.
-	Ao contrário de all(), pairs() itera todos os elementos independente do tipo de índice.
+	quanto o valor de cada item;
+	Ao contrário de all(), pairs() itera todos os elementos independente do tipo de índice:
 	
 		T = {["HELLO"]=3, [10]="BLAH"}
 		T.BLUE = 5;
@@ -979,9 +932,9 @@ pairs t
 
 	Resultado:
 		
-		K: 10  v:BLAH
+		K: 10     v:BLAH
 		K: HELLO  v:3
-		K: BLUE  v:5
+		K: BLUE   v:5
 
 
 --------------------------------------------------------------------------------------------
@@ -989,25 +942,23 @@ pairs t
 --------------------------------------------------------------------------------------------
 
 btn [i [p]]
-
-	Recupera o estado do botão i para o jogador p (default 0)
-	i: 0..5: esquerda direita cima baixo botão_o botão_x
-	p: index do jogador 0..7
+	Recupera o estado do botão i para o jogador p (padrão 0):
 	
-	Se nenhum parametro for dado, retorna o resultado de todos os 12 botões para
-	os jogadores 0 e 1
+	i: 0..5 --> esquerda, direita, cima, baixo, botão_o, botão_x;
+	p: 0..7 --> índice do jogador.
+	
+	Se nenhum parâmetro for dado, retorna o resultado de todos os 12 botões para
+	os jogadores 0 e 1;
 		// P0: bits 0..5  P1: bits 8..13
 	
 	Mapeamento padrão do teclado para os comandos dos jogadores:
-		jogador 0: Setas, Z,X / C,V / N,M
-		jogador 1: ESDF, LSHIFT,A / TAB,Q,E
-
+		jogador 0: Setas, Z, X / C, V / N,M 
+		jogador 1: ESDF, LSHIFT, A / TAB, Q, E
 
 btnp [i [p]]
-
-	O mesmo que btn(), com a diferença que apenas retorna TRUE se o botão não foi precionado no
-	frame anterior. btnp() também retorna verdadeiro para cada 4 frames após se segurar um 
-	botão pressionado por 15 frames.
+	O mesmo que btn(), com a diferença que retorna somente VERDADEIRO se o botão não foi pressionado
+	no quadro anterior. btnp() também retorna VERDADEIRO para cada 4 quadros após se segurar um 
+	botão pressionado por 15 quadros.
 	
 	Útil para comandos em menu ou "Pressione uma tecla pra continuar".
 
@@ -1016,29 +967,26 @@ btnp [i [p]]
 	Áudio
 --------------------------------------------------------------------------------------------
 
-sfx n [canal [atrazo]]
-
-	reproduz SFX n no canal (0..3) com um atrazo (0..31)
-	n -1 para parar o som no canal
-	n -2 para impedir que o som em um canal repita
-	Qualquer música sendo tocada no canal será interrompida
-	atrazo na nota (0..31)
+sfx n [canal [atraso]]
+	Reproduz SFX n no canal (0..3) com um atraso (0..31);
+	n: -1 para parar o som no canal;
+	n: -2 para impedir que o som em um canal repita;
+	Qualquer música sendo tocada no canal será interrompida;
+	Atraso na nota (0..31).
 	
-	canal -1 (default) para automaticamente escolher um canal que não esteja em uso
+	canal: -1 (padrão) para automaticamente escolher um canal que não esteja em uso.
 		// Se nada tocar, verifique se você deu parâmetros de canal para music()
-		// para que músicas não ocupem todos os canais. (ex. 1+2 para os primeiros 2 canais) 
-
+		// para que músicas não ocupem todos os canais (ex.: 1+2 para os primeiros 2 canais) 
 
 music [n [duração_fade [canais]]]
-
-	reproduz música do modelo n (0..63)
-	n -1 para parar a música
-	duração_fade em milissegundos (padrão: 0)
-	canais especifica quais canais serão usados apenas pela música
-		ex. para tocar nos canais 0, 1 e 2: 1+2+4 = 7
+	Reproduz música do modelo n (0..63);
+	n: -1 para parar a música;
+	duração_fade: em milissegundos (padrão: 0);
+	canais: especifica quais canais serão usados apenas pela música.
+		ex.: para tocar nos canais 0, 1 e 2: 1+2+4 = 7
 		
 	Canais reservados ainda podem ser utilizados para tocar SFX, mas apenas quando requerido
-	expecificamente pela função sfx().
+	especificamente pela função sfx().
 
 
 --------------------------------------------------------------------------------------------------------
@@ -1047,20 +995,20 @@ music [n [duração_fade [canais]]]
 
 mget x y
 mset x y v
-
-	Recupera ou define o valor do mapa v na posi,ão x,y
+	Recupera ou define o valor do mapa v na posição x, y.
 
 map cel_x cel_y sx sy cel_w cel_h [layer]
 
-	desenha sessão de mapa (em celulas) na posição da tela sx,sy (em pixels)
-	se uma camada for definida, apenas células com a mesma flag serão desenhadas
-		// Bitfield. Então 0x5 significa que desenhará apenas sprites com bit 0 e 2 definidos.
-		// padrão usa todos os sprites.
+	Desenha sessão de mapa (em células) na posição da tela sx, sy (em pixels);
+	Se uma camada for definida, apenas células com a mesma flag serão desenhadas.
+		// Bitfield. Então 0x5 significa que desenhará apenas sprites com bit 0 e 2 definidos
+		// Por padrão utiliza todos os sprites
 	
-	Excessão: sprite 0 sempre é usado como vazio.
+	Excessão: sprite 0 sempre é usado como vazio:
 	
-	ex. map(0,0, 20,20, 4,2)
-	-> desenha um bloco de 4x2 blocos de celulas começando em 0,0 no mapa ate a posição 20,20
+		map(0,0, 20,20, 4,2)
+		// desenha um bloco de células 4x2 começando em 0, 0 no mapa ate a posição 20, 20
+	
 	
 --------------------------------------------------------------------------------------------------------
 	Memória
@@ -1068,18 +1016,18 @@ map cel_x cel_y sx sy cel_w cel_h [layer]
 
 PICO-8 possui três tipos de memória:
 
-	1. RAM base (32k): veja o layout abaixo. Acesse com peek() poke() memcpy() e memset()
-	2. ROM do cartucho: o mesmo que o layout de base até 0x4300. Copie do cartucho para base com reload()
+	1. RAM base (32k): veja o layout abaixo. Acesse com peek(), poke(), memcpy() e memset();
+	2. ROM do cartucho: o mesmo que o layout de base até 0x4300. Copie do cartucho para base com reload();
 	3. RAM Lua (1MB): programa compilado + variáveis. Não dê atenção ao homem atrás das cortinas.
 
-	Nota técnica: // Você provavelmente não precisa saber disto
-	enquanto usa o editor, os dados sendo modificados ficam no ROM do cartucho, mas funções da API como
-	spr() e sfx() operam na RAM base. PICO-8 automaticamente copia do rom para a ram base ( invoca
+	Nota técnica: 		// Você provavelmente não precisa saber disto
+	Enquanto usa o editor, os dados sendo modificados ficam no ROM do cartucho, mas funções da API, como
+	spr() e sfx(), operam na RAM base. PICO-8 automaticamente copia do rom para a ram base (chama
 	reload()) em três casos:
 
-		1. Quando o cartucho é carregado (from 0.1.6)
-		2. Quando o cartucho é rodado
-		3. quando saindo de qualquer mono do editor
+		1. Quando um cartucho é carregado (a partir da versão 0.1.6);
+		2. Quando um cartucho é executado;
+		3. Quando saindo de qualquer um dos editores.
 
 
 :: Layout da RAM Base
@@ -1096,49 +1044,43 @@ PICO-8 possui três tipos de memória:
 	0x5f80 pinos gpio (128 bytes) // em desenvolvimento
 	0x6000 tela (8k)
 
-	dados do usuário não possuem propósito definido e podem ser usados via memcpy(), peek() e poke().
+	Dados do usuário não possuem propósito definido e podem ser usados via memcpy(), peek() e poke();
 	Dados persistentes do cartucho estão mapeados entre 0x5e00 e 0x5eff, porém apenas serão salvos se a
-	função cartdata() for chamada.
+	função cartdata() for chamada;
 	O formato de cor (gfx/screen) é definido em dois pixels por byte: bits inferiores codificam os
-	pixels a esquerda de cada par.
+	pixels à esquerda de cada par;
 	O formato do mapa é um byte por célula, onde o byte normalmente armazena o índice de um sprite.
-
 
 peek addr
 poke addr val
-
-	Le e escreve um byte para um endereço na RAM base.
-	Endereços permitidos são 0x0..0x7fff
-	Tentar ler ou escrever fora do limite causa erro
+	Lê e escreve um byte para um endereço na RAM base;
+	Endereços permitidos são: 0x0..0x7fff;
+	Tentar ler ou escrever fora do limite gera um erro.
 
 memcpy endereço_destino endereço_origem len
-
-	Copia uma quantidade de len bytes na RAM base do endereço_origem para o endereço_destino
-	Sections can be overlapping
+	Copia uma quantidade de len bytes na RAM base do endereço_origem para o endereço_destino;
+	Seções podem se sobrepor.
 
 reload endereço_destino endereço_origem len [arquivo]
-
-	O mesmo que memcpy, mas copia a partir da ROM do cartucho
-	A sessão de código ( >= 0x4300) é protegida e não pode ser lida.
-	Se for passado um nome de arquivo, os dados são copiados de um cartucho diferente
+	O mesmo que memcpy, mas copia a partir da ROM do cartucho;
+	A sessão de código (>=0x4300) é protegida e não pode ser lida;
+	Se for passado um nome de arquivo, os dados são copiados de um cartucho diferente.
 
 cstore endereço_destino endereço_origem len [arquivo]
-
-	o mesmo que memcpy, mas salva da RAM base para a ROM do Cartucho
-	cstore() equivale a cstore(0, 0, 0x4300)
-	Pode ser usado para escrever ferramentas para construir cartuchos ou para visualizar o estado
-	do mapa / spritesheet usado no editor de mapas ? editor de gráficos.
-	A sessão de código ( >= 0x4300) é protegida e não pode ser lida.
+	O mesmo que memcpy, mas salva da RAM base para a ROM do cartucho;
+	cstore() equivale a cstore(0, 0, 0x4300);
+	Pode ser usado como método de escrita para construir cartuchos ou para visualizar
+	o estado do mapa / spritesheet utilizando o editor de mapas e o editor de spritesheet;
+	A sessão de código (>=0x4300) é protegida e não pode ser lida.
 	
-	Se for passado um nome de arquivo, os dados são escritos nesse cartucho em disco.
-	Podem ser escritos em até 64 cartuchos por sessão.
-	Veja a sessão 'Dados do Cartucho' para informações adicionais de como usar cstore.
+	Se for passado um nome de arquivo, os dados são escritos nesse cartucho em disco;
+	Podem ser escritos em até 64 cartuchos por sessão;
+	Veja a sessão "Dados do cartucho" para informações adicionais de como usar cstore.
 	
 	
 memset endereço_destino val len
-
 	Define os len bytes para o valor val
-	(função rápida -- pode ser usada para desenhar scanlines horizontais, etc)
+	(função rápida; pode ser usada para desenhar scanlines horizontais etc.).
 	
 
 --------------------------------------------------------------------------------------------------------
@@ -1148,23 +1090,19 @@ memset endereço_destino val len
 max x y
 min x y
 mid x y z
-
-	Retorna o máximo, mínimo ou termo no meio dentre os parametros
-	Por exemplo, mid(7,4,10) retorna 7
+	Retorna o máximo, mínimo ou o valor médio dentre os parâmetros;
+	Por exemplo, mid(7,4,10) retorna 7.
 
 flr x
-
 	Retorna o inteiro mais próximo e menor que x // x-(x%1) 
 	flr(4.1)  --> 4
 	flr(-2.3) --> -3.0
 
-
 cos x
 sin x
-
-	Retorna cosseno de x, onde 1.0 indica um círculo
-	Seno é invertido para se adequar a tela
-	ex.: sin(0.25) retorna -1
+	Retorna cosseno de x, onde 1.0 indica um círculo;
+	Seno é invertido para se adequar à tela;
+	Por exemplo: sin(0.25) retorna -1.
 
 	Se você prefere trabalhar com radianos e sem a inversão de y, copie e cole o trecho a seguir
 	próximo ao início do programa:
@@ -1172,31 +1110,26 @@ sin x
 	cos1 = cos function cos(angle) return cos1(angle/(3.1415*2)) end
 	sin1 = sin function sin(angle) return sin1(-angle/(3.1415*2)) end
 	
-
 atan2 dx dy
-
-	Converte dx, dy em ângulos entre 0..1
-	Assim como seno e cosseno, angulos incrementam em sentido anti-horário
-	ex.: atan(1, -1) retorna 0.125
+	Converte dx, dy em ângulos entre 0..1;
+	Assim como seno e cosseno, ângulos incrementam em sentido anti-horário;
+	Por exemplo: atan(1, -1) retorna 0.125.
 
 sqrt x
-
-	Retorna a raíz quadrada de x
+	Retorna a raíz quadrada de x.
 	
 abs x
-
-	Retorna o módulo (valor positivo) de x
+	Retorna o módulo (valor positivo) de x.
 
 rnd x
-	Retorna um número ateatório n, sendo 0 <= n < x
-	Se você quiser um inteiro, use flr(rnd(x))
+	Retorna um número ateatório n, sendo 0 <= n < x;
+	Se você quiser um inteiro, use flr(rnd(x)).
 	
 srand x
-	Define o gerador de números aleatórios
-	O gerador é criado aleatóriamente quando o cartucho inicia
+	Define a semente do gerador de números aleatórios;
+	A semente é gerada automaticamente quando o cartucho inicia.
 
 Operadores binários
-
 	band x y
 	bor  x y
 	bxor x y
@@ -1213,47 +1146,45 @@ Operadores binários
 
 menuitem índice [título callback]
 
-	Adiciona um novo ítem ao menu de pausa
+	Adiciona um novo item ao menu de pausa.
 	
-	Índice deve estar entre 1..5 e determina a ordem na qual os ítems serão desenhados
-	Título deve ser uma palavra de até 16 caracteres
-	callback é uma função a ser invocada pelo cartucho
+	Índice deve estar entre 1..5 e determina a ordem na qual os ítems serão desenhados;
+	Título deve ser uma palavra de até 16 caracteres;
+	callback é uma função a ser invocada pelo cartucho.
 	
-	Quando nenhum título ou função são definidos, o item de menu é removido
+	Quando nenhum título ou função são definidos, o item de menu é removido.
 	
-	ex.:
-	menuitem(1, "reinicia fase", function() reset_puzzle() sfx(10) end)
+	Ex.:
+	menuitem(1, "Reiniciar fase", function() reset_puzzle() sfx(10) end)
 	
 
 --------------------------------------------------------------------------------------------------------
-	Strings (palavras)
+	Texto
 --------------------------------------------------------------------------------------------------------
 
-	s = "the quick brown fox"
+	s = "Um pequeno jabuti xereta viu dez cegonhas felizes"
 	
 	-- comprimento
 	
-		print(#s)          --> 19
-	
+		print(#s)          --> 49
 	
 	-- juntando palavras
 		
 		print("dois "..4) --> "dois 4"
 	
-	
 	-- sub() para pegar parte de uma palavra
 	
-		print(sub(s,5,9))  --> "quick"
-		print(sub(s,5))  --> "quick brown fox"
+		print(sub(s,12,17))  --> "jabuti"
+		print(sub(s,12))     --> "jabuti xereta viu dez cegonhas felizes"
 
 
 --------------------------------------------------------------------------------------------
-	Dados do Cartucho
+	Dados do cartucho
 --------------------------------------------------------------------------------------------
 
 	Cada cartucho pode salvar 64 números (256 bytes) de dado persistente no PICO-8
 	do usuário (ao invés de no cartucho propriamente dito). Isto pode ser usado para
-	salvar coisas como récordes ou salvar o progresso do jogador.
+	salvar coisas como recordes ou salvar o progresso do jogador.
 	
 	Se você precisar de mais do que 256 bytes, é possível escrever diretamente no
 	cartucho usando cstore(). A desvantagem é que esta informação estará amarrada
@@ -1261,22 +1192,21 @@ menuitem índice [título callback]
 	perderá o jogo salvo.
 	
 	Outra alternativa é escrever em um segundo cartucho passando um quarto parâmetro
-	a função cstore(). Para isso será necessário a troca de cartuchos, o que torna
-	o processo lento, e deixa licho de cartuchpos quando executado em uma
+	à função cstore(). Para isso será necessário a troca de cartuchos, o que torna
+	o processo lento, e deixa para trás arquivos "lixo" quando executado em uma
 	pasta local.
 
 
 cartdata id
-
-	Invoque esta função uma vez assim que o cartucho iniciar. O parâmetro id é uma palavra
+	Chame esta função uma vez assim que o cartucho iniciar. O parâmetro id é uma palavra
 	de até 64 caracteres e deve ser incomum o suficiente para que outros cartuchos não 
 	tenham, acidentalmente, o mesmo id.
 	
 	Ex.: cartdata("zep_jelpi")
 	
-	Caracteres permitidos são a..z, 0..9 e subtraço(_)
+	Caracteres permitidos são a..z, 0..9 e subtraço(_).
 
-	retorna verdadeiro se os dados foram carregados.
+	Retorna verdadeiro se os dados foram carregados.
 
 	cartdata não pode ser invocada mais de uma vez por execução do cartucho.
 	
@@ -1285,21 +1215,19 @@ cartdata id
 	
 	
 dget índice
-
-	Recupera o número armazenado no índice (0..63)
-	Use apenas após invocar cartdata()
+	Recupera o número armazenado no índice (0..63);
+	Use apenas após invocar cartdata().
 
 dset índice valor
-
-	Define o número a ser salvo no índice (0..63)
-	Use apenas após invocar cartdata()
+	Define o número a ser salvo no índice (0..63);
+	Use apenas após invocar cartdata().
 	
-	Não é necessário confirmar dados escritos -- eles são automaticamente salvos no
-	armazenamento permanente mesmo que seja feito usando POKE().
+	Não é necessário confirmar dados escritos; eles são automaticamente salvos no
+	armazenamento permanente mesmo que seja feito usando poke().
 	
 
 ------------------------------------------------------------------------------------------------------------
-	Histórico de Versão
+	Histórico de versões
 ------------------------------------------------------------------------------------------------------------
 
 	v0.1.8
@@ -1647,6 +1575,3 @@ dset índice valor
 	v0.0.1 
 
 		Primeiro Alpha
-
-
-
